@@ -43,3 +43,22 @@ CMD + SHIFT + .
 - 去掉几乎所有的快捷键.
 - 选项调到9.
 - 背景用深色
+
+
+
+###### 流氓启动项
+
+```
+/Library/LaunchAgents/
+adobe特别流氓, 因此, 删除之后立刻重启
+```
+
+
+
+###### vscode
+
+参见vscode
+
+###### 预览
+
+参见quicklook
