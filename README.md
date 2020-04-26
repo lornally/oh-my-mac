@@ -62,3 +62,30 @@ adobe特别流氓, 因此, 删除之后立刻重启
 ###### 预览
 
 参见quicklook
+
+
+
+
+
+###### js开发
+
+nvm/node
+
+```sh
+brew install nvm
+mkdir ~/.nvm
+
+```
+
+```sh
+ nvm install node
+```
+
+
+
+eslint
+
+```sh
+cnpm install eslint -g
+```
+
