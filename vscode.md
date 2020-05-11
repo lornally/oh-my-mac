@@ -63,7 +63,7 @@ editor.acceptSuggestionOnCommitCharacter
 
 ```
 
-###### 去除自动tab转空格
+###### 去除自动tab转空格, eslint有单独的示例在[隐藏的配置文件]
 
 ```
 eslintrc

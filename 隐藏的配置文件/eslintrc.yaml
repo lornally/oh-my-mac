@@ -1,0 +1,41 @@
+
+
+
+
+env:
+  browser: true
+  es6: true
+  webextensions: true
+  node: true
+extends: 'eslint:recommended'
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+  chrome: true
+parserOptions:
+  ecmaVersion: 2018
+#parser: "babel-eslint"
+rules:
+  indent: 0 
+  linebreak-style:
+    - error
+    - unix
+  quotes: 0
+  semi:
+    - error
+    - always
+  no-tabs: 0
+  prettier/prettier": 0
+  # react/prop-types": 0
+  # react/jsx-indent": [2, "tab"]
+  # react/jsx-indent-props": [2, "tab"]
+
+  #或许有用的内容
+	# 'strict': [0]
+	# 	'vars-on-top': 0
+	# 	'global-require': 0
+	# 	"indent": 0
+	# 	"no-tabs":0
+	# 	"prettier/prettier": 0
+	# 	"spaced-comment":0
+	# 	'new-cap':0

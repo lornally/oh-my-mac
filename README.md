@@ -81,30 +81,4 @@ mkdir ~/.nvm
  nvm install node
 ```
 
-
-
-eslint
-
-```sh
-cnpm i eslint -g
-```
-
-航锋推荐用这个: https://github.com/umijs/fabric
-
-在自己的每一个工作目录运行
-
-```sh
-npm init   //先要保证是一个npm目录才行.
-eslint --init  
-```
-
-配置文件暂时没有合适的.  post里面有2个eslint
-
-
-
-据说需要装这个插件, 可以去npm找找看有没有更好用的.
-
-```sh
-cnpm i -g eslint-plugin-html 
-```
-
+eslint 单独兴辉腾文档
