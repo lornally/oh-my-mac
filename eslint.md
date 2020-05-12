@@ -115,6 +115,22 @@ rules:
 /* global getUsefulContents,xxx */
 ```
 
-- 递增式声明使用overload
+- 递增式声明使用overrides, 在一个配置文件中指明对不同的目录使用不同的规则.
+
+- 更好的方式是, 不同的目录放置不同的配置文件, 这样可以使用不同的规则给不同各地目录.
+
+  - https://stackoverflow.com/questions/36762468/how-do-i-setup-a-folder-with-a-different-rule-and-another-folder-with-a-differen
+  - https://stackoverflow.com/questions/38615872/configure-different-eslint-rules-for-a-set-of-paths
+  - https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
   - 场景: 全局定义一个总的eslintrc
   - 每个项目再定义一个自身的eslintrc
+  - ESLint 一旦发现配置文件中有 `"root": true`，它就会停止在父级目录中寻找。
+
+  ```yaml
+   root: true
+  ```
+
+  - 如果是包含前后端的项目, 则可以针对不同的目录使用不同的规则. 
+    - 前段规则
+    - 后端规则
+    - 插件规则
