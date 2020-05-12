@@ -1,7 +1,3 @@
-
-
-
-
 env:
   browser: true
   es6: true
@@ -17,25 +13,28 @@ parserOptions:
 #parser: "babel-eslint"
 rules:
   indent: 0 
-  linebreak-style:
-    - error
-    - unix
-  quotes: 0
+  linebreak-style: 0
+  quotes: 0  #不是很有意义
   semi:
     - error
     - always
-  no-tabs: 0
+  no-tabs: 0  #不能使用这个, 尤其是做editor开发时.
   prettier/prettier": 0
+  no-mixed-spaces-and-tabs: 0  #这个和tabs的问题是一样的, 字符串替换的时候会被搞死
+  # 第一个值3选一    
+#"off" or 0 - 关闭规则
+#"warn" or 1 - 将规则视为一个警告（不会影响退出码）
+#"error" or 2 - 将规则视为一个错误 (退出码为1)
+# 第二个值指定需要遵守的规范. 比如换行有window和unix两种
+  #或许有用的内容
   # react/prop-types": 0
   # react/jsx-indent": [2, "tab"]
   # react/jsx-indent-props": [2, "tab"]
-
-  #或许有用的内容
 	# 'strict': [0]
-	# 	'vars-on-top': 0
-	# 	'global-require': 0
-	# 	"indent": 0
-	# 	"no-tabs":0
-	# 	"prettier/prettier": 0
-	# 	"spaced-comment":0
-	# 	'new-cap':0
+	# 'vars-on-top': 0
+	#'global-require': 0
+	#"indent": 0
+	#"no-tabs":0
+	#"prettier/prettier": 0
+	#"spaced-comment":0
+	#'new-cap':0

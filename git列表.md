@@ -2,5 +2,6 @@
 
 ```sh
 git clone git@github.com:mdn/webextensions-examples.git
+git clone https://github.com/dracula/macdown.git
 ```
 
