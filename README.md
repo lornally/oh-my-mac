@@ -1,4 +1,4 @@
-###### 这里是一个新mac需要的所有内容的git
+###### 这里是一个新mac需要的所有内容
 
 
 
@@ -81,4 +81,6 @@ mkdir ~/.nvm
  nvm install node
 ```
 
-eslint 单独兴辉腾文档
+###### eslint
+
+参见eslin

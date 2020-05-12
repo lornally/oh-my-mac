@@ -1,14 +1,6 @@
-# mygit
+稍微列举一下需要拿下来的git项目:
 
 ```sh
-git clone git@github.com:lornally/luoism.git
-git clone git@github.com:lornally/lornally.github.io.git
-git clone git@github.com:lornally/editor.git
+git clone git@github.com:mdn/webextensions-examples.git
 ```
-
-
-
-git@github.com:lornally/luoism.git
-
-git@github.com:lornally/lornally.github.io.git
 
