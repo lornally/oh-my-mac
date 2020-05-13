@@ -1,4 +1,4 @@
-root: ture #根目录的eslint配置需要这个
+root: true #根目录的eslint配置需要这个
 env:
   browser: true
   es6: true
@@ -22,6 +22,9 @@ rules:
   no-tabs: 0  #不能使用这个, 尤其是做editor开发时.
   prettier/prettier": 0
   no-mixed-spaces-and-tabs: 0  #这个和tabs的问题是一样的, 字符串替换的时候会被搞死
+  strict: 
+    - 2
+    - global
   # react/prop-types": 0
   # react/jsx-indent": [2, "tab"]
   # react/jsx-indent-props": [2, "tab"]
