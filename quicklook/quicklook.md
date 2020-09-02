@@ -1,12 +1,11 @@
+###### textmate 是否才是万能钥匙?
+
+- 下面这些都不搞, 只装textmate.
+- 并不行. 重启了也还是不行. 
+
 ###### 基础命令
 
 ```sh
-
-#先装一个十全大补膏
-# brew cask reinstall qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv  qlimagesize webpquicklook suspicious-package quicklookase qlvideo
-
-#brew cask reinstall   qlmarkdown #貌似没有, 重启一下试试.
-
 # 刷新
 qlmanage -r 
 qlmanage -r cache
@@ -22,9 +21,6 @@ qlmanage -l #列出所有quicklook
 
 ```sh
 brew cask reinstall qlimagesize suspicious-package   quicklook-csv quicklook-json qlcommonmark qlcolorcode qlstephen
-
-# quicklookapk 这个装不上
-brew cask install betterzip #为了quicklook, 装一下试试.
 ```
 
 参考: https://htr3n.github.io/2018/07/handy-quicklook/
@@ -32,7 +28,7 @@ brew cask install betterzip #为了quicklook, 装一下试试.
 ###### markdown定制
 
 ```sh
-#qlcommonmark的配置文件
+#qlcommonmark的配置文件, 也可以直接copy到~目录.
 code ~/.cmqlstyle.css
 ```
 
