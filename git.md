@@ -17,13 +17,6 @@
    git clone git@github.com:lornally/mygit.git
   ```
 
-  
-
-
-
-
-
-
 
 
 ###### 项目
@@ -36,3 +29,4 @@ git clone https://github.com/dracula/macdown.git
 ```
 
 我的项目本身也形成了一个git项目: oh-my-project
+
