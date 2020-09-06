@@ -20,7 +20,7 @@ qlmanage -l #列出所有quicklook
 ###### 安装
 
 ```sh
-brew cask reinstall qlimagesize suspicious-package   quicklook-csv quicklook-json qlcommonmark qlcolorcode qlstephen
+brew cask reinstall qlimagesize suspicious-package   quicklook-csv quicklook-json qlcommonmark qlcolorcode qlstephen textmate
 ```
 
 参考: https://htr3n.github.io/2018/07/handy-quicklook/
