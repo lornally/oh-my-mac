@@ -206,6 +206,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 #export https_proxy=http://127.0.0.1:1087;
 
 alias neton="export all_proxy=socks5://127.0.0.1:1080"
+alias httpon="export all_proxy=http://127.0.0.1:1087"
+
 alias netoff="unset all_proxy"
 alias ip="curl cip.cc"
 
