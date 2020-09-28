@@ -1,6 +1,0 @@
-brew install wget
-wget http://crt.sectigo.com/SectigoRSADomainValidationSecureServerCA.crt
-
-
-直接浏览器访问， 就可以解决这个问题。
-https://support.apple.com/kb/DL1572?locale=en_US
