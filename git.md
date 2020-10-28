@@ -30,3 +30,27 @@ git clone https://github.com/dracula/macdown.git
 
 我的项目本身也形成了一个git项目: oh-my-project
 
+###### 列举几个常用功能
+
+```sh
+# git设置默认分支和默认推送
+gl origin main
+git branch -M main
+git push -u origin main
+
+### 查看文件变动
+# gaa之前, 查看待提交内容
+gd
+#gaa之后, gcam之前.
+gdca 
+#git commit之后
+gsps #git show --pretty=short --show-signature
+    #下面这两个是等效的
+    gd @^
+    gd @~ 
+    #这里面 ~=^, @=HEAD
+    gd HEAD~2 # 这个是本尊.
+    g show #等于上面这个.
+```
+
+参考: https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
