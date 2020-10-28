@@ -1,0 +1,2 @@
+- zsh: https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
+- bash/zsh: https://cheatography.com/davidsouther/cheat-sheets/bash-zsh-shourtcuts/#downloads
