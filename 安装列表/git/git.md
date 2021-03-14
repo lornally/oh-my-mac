@@ -9,10 +9,14 @@
     ```sh
     ssh-keygen -t rsa -b 4096 -C "machangkun@me.com"
     pbcopy < ~/.ssh/id_rsa.pub
+    
+  # 新的写法有所不同
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+  pbcopy < ~/.ssh/id_ed25519.pub  
     ```
-
+  
   - 维护一个git项目, 纯新的mac(mygit) 
-
+  
   ```sh
    git clone git@github.com:lornally/mygit.git
   ```

@@ -1,5 +1,6 @@
 # .开头的
 .*
+.DS_Store
 
 # ~结尾的
 *~  
@@ -13,6 +14,7 @@ temp.js
 
 # 自己做实验要用的
 log/
+mlib/
 
 
 # log文件
@@ -21,6 +23,7 @@ log.*
 
 # electron builder生成的dist目录
 dist/
+
 
 
 # json数据文件
