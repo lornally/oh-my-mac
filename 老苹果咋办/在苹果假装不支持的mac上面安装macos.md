@@ -7,6 +7,10 @@
 ###### 安装最新版
 
 - macOS Catalina Patcher
+- 下载这个软件, 制作启动盘
+- 开机时, 按住option, 选择启动磁盘
+- 至少这个11.15是完美的, 感谢大神
+- http://dosdude1.com/
 
 - https://www.reddit.com/r/CatalinaPatcher/comments/h0jr1v/chrome_issues/
 
