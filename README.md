@@ -94,16 +94,4 @@ mkdir ~/.nvm
 
 - 针对老苹果的文档: [老苹果咋办]
 
-###### temp
-
-- https://www.reddit.com/r/CatalinaPatcher/comments/h0jr1v/chrome_issues/
-
-```sh
-xcode-select --install
-sudo xattr -cr /Applications/Google\ Chrome.app
-
-sudo codesign -f -s - /Applications/Google\ Chrome.app
-
-```
-
 

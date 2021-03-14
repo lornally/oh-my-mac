@@ -8,6 +8,18 @@
 
 - macOS Catalina Patcher
 
+- https://www.reddit.com/r/CatalinaPatcher/comments/h0jr1v/chrome_issues/
+
+  ```sh
+  xcode-select --install
+  sudo xattr -cr /Applications/Google\ Chrome.app
+  
+  sudo codesign -f -s - /Applications/Google\ Chrome.app
+  
+  ```
+
+  
+
 ###### 安装官方支持的版本
 
 - 是的, 安装官方支持的版本也很难. 因为, 开机安装会失败.
