@@ -19,11 +19,29 @@ pbcopy < ~/.ssh/id_ed25519.pub
 git clone git@github.com:lornally/mygit.git
 ```
 
+###### gitignore
 
+1. 可以在用户目录下创建 ~/.gitignore，然后用命令引入这个ignore文件.
+
+   ```sh
+   git config --global core.excludesfile ~/.gitignore #需要执行, 来使得它生效
+   ```
+
+2. 也可以在 ~/.gitconfig 配置 .gitignore文件, 比如:
+
+   ```ini
+   [user]
+      name = xiaoronglv
+      email = xxxxx@gmail.com
+   [push]
+      default = matching
+   [core]
+      excludesfile = ~/.gitignore
+   ```
+
+3. 项目里面弄一个gitignore文件是比较好的方式, 全局文件在有多个磁盘的时候, 是失效的.
 
 ###### 项目
-
-- 特别提示: 一定要项目里面弄一个gitignore文件, 全局文件在有多个磁盘的时候, 是失效的.
 
 稍微列举一下需要拿下来的git项目:
 
