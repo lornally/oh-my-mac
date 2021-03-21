@@ -2,6 +2,10 @@
 
   - 工具会被被brew带上
 
+  ```sh
+  brew install git-lfs # 为了顺畅处理大文件, 需要安装这个.
+  ```
+  
   - 上传key到github
 
 ```sh
