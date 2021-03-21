@@ -1,1 +1,3 @@
-qbittorrent还不错, 但是可能启动不了
+- qbittorrent还不错, 但是可能启动不了
+- transmission
+- folx
