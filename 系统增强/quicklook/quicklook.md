@@ -39,3 +39,12 @@ css无法预览, 重启一下试试.
 - 很有可能安装一个textmate可以解决所有问题.
 - 很多的quicklook是白背景, 这个基本不能忍. 
 
+###### freemind忽然不能预览的问题.
+
+```sh
+# “FreemindQL.qlgenerator” cannot be opened because the developer cannot be verified.
+# macOS cannot verify that this app is free from malware.
+
+macos quicklook check current shell  cannot be opened because the developer cannot be verified. macOS cannot verify that this app is free from malware.
+```
+
