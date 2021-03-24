@@ -1,0 +1,10 @@
+###### 并不是越新越好
+
+- 对比就看出来了, mindnote2是他的巅峰之作, 之后的版本很难用. 
+- 同样, freemind推荐使用这个0.9的版本, 小巧.
+
+###### freemind设置颜色
+
+- defaults设置背景色
+- apprearance设置选择selected颜色
+- 他其实是支持mindnode/xmind的那些花里胡哨的展示的, 但是, 没有show出来. 真的很神奇.
