@@ -24,4 +24,32 @@ macos quicklook check current shell  cannot be opened because the developer cann
 
 ###### 20210325
 
-- 总结之前的经验
+- 总结之前的经验 done
+- 这个玩意的权限咋弄?
+
+```
+FreemindQL.qlgenerator
+```
+
+- 步骤
+
+```
+搜索:
+"qlgenerator"  cannot be opened because the developer cannot be verified
+地址:
+https://trac.macports.org/ticket/59218
+
+
+In the interim, to manually stop the QL* files from being blocked by Catalina due to developer cannot be verified you can run:
+
+$ xattr -d com.apple.quarantine /path/to/file
+
+For example, to ignore the developer cannot be verified error for QLMarkdown I can run (note I installed it using homebrew but that doesn't change anything):
+
+$ xattr -d com.apple.quarantine ~/Library/QuickLook/QLMarkdown.qlgenerator/Contents/MacOS/QLMarkdown
+
+Your path might be different than mine
+
+Do this for all the ql* file you have downloaded, keep in mind is the definitely not secure as in that you may be running a malicious QL* file. All of my files are stored in ~/Library/QuickLook/QL.*/Contents/MacOS/program
+```
+
