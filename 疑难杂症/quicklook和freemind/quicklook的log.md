@@ -205,3 +205,67 @@ Instead, one should implement the QuickLook Preview Extension target. Launching 
 Btw, echo-ing from GenerateThumbnailForURL.m should no longer work on Catalina because the extension doesn't have write permissions.
 ```
 
+- 试一下这个
+
+```sh
+sudo xattr -cr /Applications/FreeMind.app
+sudo codesign -f -s - /Applications/FreeMind.app
+```
+
+- debug
+
+```
+qlmanage -p ./信息架构.mm
+
+Add NSLog(...) statements to your code.
+Build your .qlgenerator file and install it into ~/Library/QuickLook
+run qlmanage -r to activate your new plugin
+run qlmanage -p someFile to run the preview generation and see the NSLog statemnts of GeneratePreviewForURL in the Terminal.
+run qlmanage -t someFile to run the icon generation and see the NSLog staments of GenerateThumbnailForURL in the Terminal.
+Use the qlmanage -t (or -t -s someBiggerNumber), if your code for generating thumbnails uses QLThumbnailRequestSetThumbnailWithDataRepresentation and is substantially similar to the one for previews.
+
+Use qlmanage -o dir to output generated HTML to a file that you can inspect with Quicklook from Finder.
+```
+
+- https://stackoverflow.com/questions/28318688/cannot-debug-my-quicklook-plugin-under-xcode?rq=1
+- 检查plist:
+- https://stackoverflow.com/questions/10625394/quicklook-plugin-not-getting-noticed?rq=1
+
+```
+You might want to check your generator's Info.plist using plutil -lint and my own free InfoPlistChecker.
+```
+
+###### guicklook文档
+
+- https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/Quicklook_Programming_Guide/Articles/QLArchitecture.html#//apple_ref/doc/uid/TP40005020-CH4-SW1
+- https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/Quicklook_Programming_Guide/Articles/QLSaveInDocument.html#//apple_ref/doc/uid/TP40005020-CH10-SW4
+
+###### 无法新建目录
+
+- https://apple.stackexchange.com/questions/192227/how-to-make-files-in-usr-local-writable-for-homebrew
+- https://apple.stackexchange.com/questions/339862/ls-operation-not-permitted-mojave-security
+
+```sh
+# This should be solved changing the perms on that directory in the following way:
+cd /usr/local
+sudo chown -R <your-username>:<your-group-name> *
+# If you don't know your group, just type id -g.
+sudo chown -R `whoami` /usr/local
+
+Go to System Preferences > Security & Privacy and give Full Disk Access to Terminal.
+
+Steps:
+
+ Apple menu -> System Preferences -> Security & Privacy -> Privacy -> Full Disk Access -> +
+
+Choose:
+
+Applications -> Utilities -> folder -> Terminal -> open/grant terminal full disk access privileges. -> Relaunch terminal
+
+chflags -R nouchg .
+```
+
+###### debug quicklook
+
+- https://stackoverflow.com/questions/16811547/debugging-quicklook-plugin-in-xcode-4-6
+- https://stackoverflow.com/questions/9412156/how-to-generate-core-dumps-in-mac-os-x

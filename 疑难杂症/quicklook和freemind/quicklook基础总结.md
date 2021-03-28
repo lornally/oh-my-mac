@@ -82,3 +82,9 @@ See /usr/include/servers/bootstrap_defs.h for the error codes. #这个文件并�
 
 - 文档在这里: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/Quicklook_Programming_Guide/Introduction/Introduction.html
 - 为了让我的quick look用的开心, 查了很多资料. wiki还是最靠谱的. : https://en.wikipedia.org/wiki/Quick_Look#/Supported_file_types_by_default
+
+- https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/Quicklook_Programming_Guide/Articles/QLArchitecture.html#//apple_ref/doc/uid/TP40005020-CH4-SW1
+- https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/Quicklook_Programming_Guide/Articles/QLSaveInDocument.html#//apple_ref/doc/uid/TP40005020-CH10-SW4
+- https://developer.apple.com/documentation/quicklook
+- https://developer.apple.com/design/human-interface-guidelines/macos/system-capabilities/quick-look/
+- 中文文档放到了[环境]里面
