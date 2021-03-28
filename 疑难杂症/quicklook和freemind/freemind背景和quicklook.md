@@ -14,17 +14,7 @@
 git clone git://git.code.sf.net/p/freemind/code freemind-code
 ```
 
-
-
-
-
-
-
-
-
-
-
-
+- 放到知网的back目录下
 
 ### 研究历程
 

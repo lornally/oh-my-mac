@@ -78,10 +78,6 @@ See /usr/include/servers/bootstrap_defs.h for the error codes. #这个文件并�
 
 
 
-
-
-
-
 ### 官方文档
 
 - 文档在这里: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/Quicklook_Programming_Guide/Introduction/Introduction.html
