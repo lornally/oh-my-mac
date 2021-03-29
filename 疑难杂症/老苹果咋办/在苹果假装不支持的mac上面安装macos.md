@@ -34,6 +34,7 @@ sudo codesign -f -s - /Applications/qBittorrent.app
 - mojava10.14
 - 需要从苹果官方下载os.
   - safari->app store -> software update 这操作真是神奇了.
+  - 下载好的文件会呆在application, 苹果不会删除它, 这个倒是比较好.
 - mojava patcher本身有下载的地方tools->downloads.
 
 ###### 安装官方支持的版本
