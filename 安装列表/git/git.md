@@ -42,6 +42,8 @@ git clone git@github.com:lornally/mygit.git
       default = matching
    [core]
       excludesfile = ~/.gitignore
+      # ~ 可能会有问题, 因此要用下面这种形式, 记得要改用户的地址为真实地址
+      excludesfile = /Users/machangkun/.gitignore_global
    ```
 
 3. 项目里面弄一个gitignore文件是比较好的方式, 全局文件在有多个磁盘的时候, 是失效的.
