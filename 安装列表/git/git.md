@@ -24,6 +24,30 @@ pbcopy < ~/.ssh/id_ed25519.pub
 git clone git@github.com:lornally/mygit.git
 ```
 
+###### 配置示例
+
+```ini
+[user] 
+	name = bergman
+	email = machangkun1984@qq.com
+[core]
+	excludesfile = /Users/bergman/.gitignore_global
+	editor = mate --wait
+	quotepath = false
+# [branch "master"] #pull的时候, 用rebase取代merge
+# 	rebase = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/bergman/.stCommitMsg
+[pull]
+	rebase = true
+```
+
 ###### gitignore
 
 1. 可以在用户目录下创建 ~/.gitignore，然后用命令引入这个ignore文件.
