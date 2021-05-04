@@ -10,7 +10,7 @@
   - 上传key到github
 
 ```sh
-ssh-keygen -t rsa -b 4096 -C "307012389@qq.com"
+ssh-keygen -t rsa -b 4096 -C "mac13寸2017@qq.com"
 pbcopy < ~/.ssh/id_rsa.pub
 
 # 新的写法有所不同
