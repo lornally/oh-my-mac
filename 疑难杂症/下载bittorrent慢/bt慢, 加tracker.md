@@ -45,9 +45,12 @@ https://github.com/ngosang/trackerslist
 - https://axutongxue.github.io/
 - 终点关注: https://zhuanlan.zhihu.com/p/85652893
 
+###### qbittorrent
 
+1. 设置->bittorrent-> 自动添加trackers
+2. 设置-> 高级->总是向同级所有tracker汇报
 
-
+- 参考: https://www.icoa.cn/a/869.html
 
 
 

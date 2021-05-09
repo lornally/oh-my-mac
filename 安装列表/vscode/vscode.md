@@ -11,7 +11,8 @@ Editor: Tab Completion   改为on
 
 ```
 keyboard shortcut里面
-改为shift+tab
+搜索所有的shift option F
+改为option tab
 ```
 
 ### 安装插件
