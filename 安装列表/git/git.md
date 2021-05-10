@@ -1,6 +1,18 @@
-- git
+###### 安装和配置
 
-  - 工具会被被brew带上
+- 工具会被被brew带上
+- 走代理的配置需要修改zshrc
+
+```sh
+Host github.com
+    User git
+    ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p
+```
+
+
+
+###### 大文件配置
+
 - 为了顺畅处理大文件, 需要安装这个:
   
   ```sh
@@ -18,11 +30,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 pbcopy < ~/.ssh/id_ed25519.pub  
 ```
 
-  - 维护一个git项目, 纯新的mac(mygit) 
 
-```sh
-git clone git@github.com:lornally/mygit.git
-```
 
 ###### 配置示例
 
@@ -107,3 +115,9 @@ gsps #git show --pretty=short --show-signature
 ```
 
 参考: https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet
+
+###### 本项目也是一个git项目 
+
+```sh
+git clone git@github.com:lornally/mygit.git
+```
