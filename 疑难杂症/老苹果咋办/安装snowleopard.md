@@ -1,3 +1,5 @@
+### 系统安装
+
 ###### 下载10.6
 
 - 下载了macos 10.6 
@@ -33,3 +35,32 @@
 - 开机时按住cmd+R
 - 然后磁盘工具可以恢复磁盘
 - 记得事前把镜像文件放到顺手的地方, 比如: share文件夹
+
+### 软件
+
+- iwork09, 找资源下载
+- freemind 有10.6.8版本, 官网可以装
+- google chrome 49, 官网可以装
+- sogou输入法 2.1, 找资源下载
+- sublime2, 官网可以
+- theunarchiver, 官网可以
+- vlc2.2.8, 官网可以
+- brew, 官方有替代方案: tigerbrew
+
+###### 信息传递
+
+- qq, 微信都不可以
+- ichat, google talk也都完蛋了
+- idisk, mobileme也都完蛋了
+- mail.163.com可以的
+
+###### 遇到的问题
+
+- git, 这个之前确实没想到, 要安装git
+
+
+
+###### 科学上网, 
+
+- v2ray没戏了, shadowsocks是否可以, 不清楚.
+- host模式可能可以, 尝试一下, 其实关键是github.
