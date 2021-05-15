@@ -6,7 +6,8 @@ mlib/
 # fixdisk 需要的开源项目
 libfsapfs*
 
-
+# 科学上网需要的项目
+v2ray-core
 
 
 
