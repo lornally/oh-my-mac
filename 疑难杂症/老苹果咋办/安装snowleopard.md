@@ -79,7 +79,9 @@ ruby -e "$(curl -fsSkL raw.github.com/mistydemeo/tigerbrew/go/install)"
 
 ### 尚未解决
 
-- sublime 没有保存工作区, 可能可以用project解决
+- sublime 没有保存工作区, 
+  - 可能可以用project解决
+  - 或许这个设置可以的:  **hot_exit** : Preferences.sublime-settings
 - tigerbrew 无法使用
   - https://www.jianshu.com/p/bea984d27cd2
   - 可能用科大源可以解决大部分问题: https://mirrors.ustc.edu.cn/
