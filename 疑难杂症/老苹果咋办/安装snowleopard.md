@@ -67,6 +67,7 @@ https://git-scm.com/download
 https://github.com/timcharper/git_osx_installer
 https://sourceforge.net/projects/git-osx-installer/
 
+# 并且使用host可以解决github的访问问题
 ```
 - brew, 官方有替代方案: tigerbrew
 ```sh
@@ -76,9 +77,18 @@ ruby -e "$(curl -fsSkL raw.github.com/mistydemeo/tigerbrew/go/install)"
 - 滚轮方向不对
 	- 安装软件: https://pilotmoon.com/scrollreverser/
 
+### 尚未解决
+
 - sublime 没有保存工作区
+- tigerbrew 无法使用
+  - https://www.jianshu.com/p/bea984d27cd2
+  - 可能用科大源可以解决大部分问题: https://mirrors.ustc.edu.cn/
+  - https://www.zhihu.com/question/31360766
+- zsh安装
+  - https://blog.csdn.net/shenhonglei1234/article/details/106653646
+  - https://touka.dev/tech/oh-my-zsh-china-mirror/
 
 ###### 科学上网, 
 
 - v2ray没戏了, shadowsocks是否可以, 不清楚.
-- host模式可能可以, 尝试一下, 其实关键是github.
+- 可能这个有用: https://www.tynsoe.org/stm/
