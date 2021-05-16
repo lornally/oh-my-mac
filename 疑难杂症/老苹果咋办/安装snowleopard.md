@@ -45,7 +45,7 @@
 - sublime2, 官网可以
 - theunarchiver, 官网可以
 - vlc2.2.8, 官网可以
-- brew, 官方有替代方案: tigerbrew
+- karabanar 成为了必需品, 需要安装版本8.4
 
 ###### 信息传递
 
@@ -57,8 +57,26 @@
 ###### 遇到的问题
 
 - git, 这个之前确实没想到, 要安装git
+```sh
+# 即便xcode也不能用， 因为xcode的tools是针对10.7的
+# git官网也是不可以的， 但是， 这里给了线索
+https://git-scm.com/download
 
 
+＃ git 和 sf都可以
+https://github.com/timcharper/git_osx_installer
+https://sourceforge.net/projects/git-osx-installer/
+
+```
+- brew, 官方有替代方案: tigerbrew
+```sh
+ruby -e "$(curl -fsSkL raw.github.com/mistydemeo/tigerbrew/go/install)"
+```
+
+- 滚轮方向不对
+	- 安装软件: https://pilotmoon.com/scrollreverser/
+
+- sublime 没有保存工作区
 
 ###### 科学上网, 
 
