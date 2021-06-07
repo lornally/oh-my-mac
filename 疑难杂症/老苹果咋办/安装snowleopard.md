@@ -77,6 +77,74 @@ ruby -e "$(curl -fsSkL raw.github.com/mistydemeo/tigerbrew/go/install)"
 - 滚轮方向不对
 	- 安装软件: https://pilotmoon.com/scrollreverser/
 
+###### zsh安装
+参考: https://zhuanlan.zhihu.com/p/113019330
+主要思路
+1. git clone项目下来
+2. 注释掉setup_ohmyzsh函数和调用
+3. 注释掉文件夹已经存在的判断
+4. 把文件夹改名为 ~/.oh_my_zsh
+```
+{+#+} setup_ohmyzsh() {
+#   {+#+} Prevent the cloned repository from having insecure permissions. Failing to do
+#   {+#+} so causes compinit() calls to fail with "command not found: compdef" errors
+#   {+#+} for users with insecure umasks (e.g., "002", allowing group writability). Note
+#   {+#+} that this will be ignored under Cygwin by default, as Windows ACLs take
+#   {+#+} precedence over umasks except for filesystems mounted with option "noacl".
+{+#+}   umask g-w,o-w
+{+# +}
+{+#+}   echo "${BLUE}Cloning Oh My Zsh...${RESET}"
+{+# +}
+{+#+}   command_exists git || {
+{+#+}     fmt_error "git is not installed"
+{+#+}     exit 1
+{+#+}   }
+{+# +}
+{+#+}   ostype=$(uname)
+{+#+}   if [ -z "${ostype%CYGWIN*}" ] && git --version | grep -q msysgit; then
+{+#+}     fmt_error "Windows/MSYS Git is not supported on Cygwin"
+{+#+}     fmt_error "Make sure the Cygwin git package is installed and is first on the \$PATH"
+{+#+}     exit 1
+{+#+}   fi
+{+# +}
+{+#+}   git clone -c core.eol=lf -c core.autocrlf=false \
+{+#+}     -c fsck.zeroPaddedFilemode=ignore \
+{+#+}     -c fetch.fsck.zeroPaddedFilemode=ignore \
+{+#+}     -c receive.fsck.zeroPaddedFilemode=ignore \
+{+#+}     --depth=1 --branch "$BRANCH" "$REMOTE" "$ZSH" || {
+{+#+}     fmt_error "git clone of oh-my-zsh repo failed"
+{+#+}     exit 1
+{+#+}   }
+{+# +}
+{+#+}   echo
+{+#+} }
+
+setup_zshrc() {
+  # Keep most recent old .zshrc at .zshrc.pre-oh-my-zsh, and older ones
+@@ -265,29 +265,29 @@ main() {
+    exit 1
+  fi
+
+  {+#+} if [ -d "$ZSH" ]; then
+  {+#+}     echo "${YELLOW}The \$ZSH folder already exists ($ZSH).${RESET}"
+  {+#+}     if [ "$custom_zsh" = yes ]; then
+  {+#+}       cat <<EOF
+  {+# +}
+{+  #+} You ran the installer with the \$ZSH setting or the \$ZSH variable is
+  {+#+} exported. You have 3 options:
+  {+# +}
+{+  #+} 1. Unset the ZSH variable when calling the installer:
+  {+#+}    $(fmt_code "ZSH= sh install.sh")
+  {+#+} 2. Install Oh My Zsh to a directory that doesn't exist yet:
+  {+#+}    $(fmt_code "ZSH=path/to/new/ohmyzsh/folder sh install.sh")
+  {+#+} 3. (Caution) If the folder doesn't contain important information,
+  {+#+}    you can just remove it with $(fmt_code "rm -r $ZSH")
+  {+# +}
+{+  #+} EOF
+
+
+```
+
 ### 尚未解决
 
 - sublime 没有保存工作区, 
