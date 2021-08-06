@@ -27,3 +27,4 @@ vscode /usr/local/etc/v2ray/config.json
  v2ray -config=/usr/local/etc/v2ray/config.json
 ```
 
+> 抛弃界面, 抛弃麻烦, 这个世界清静了
