@@ -9,6 +9,16 @@ Host github.com
     ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p
 ```
 
+###### 用户名和中文路径
+```sh
+[user]
+# Please adapt and uncomment the following lines:
+  name = bergman
+  email = bergman@17mbp.local
+[core]
+  quotepath =false
+
+```
 
 
 ###### 大文件配置
