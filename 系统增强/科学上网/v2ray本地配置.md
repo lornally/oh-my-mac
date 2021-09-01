@@ -23,8 +23,8 @@ vscode /usr/local/etc/v2ray/config.json
 ###### 执行
 
 ```sh
- brew services start v2ray
- v2ray -config=/usr/local/etc/v2ray/config.json
+v2ray -config=/usr/local/etc/v2ray/config.json # 先执行这个, 看看是否有问题
+brew services start v2ray # 然后搞成service执行
 ```
 
 > 抛弃界面, 抛弃麻烦, 这个世界清静了

@@ -1,9 +1,9 @@
 export ZSH="/Users/machangkun/.oh-my-zsh"
 ZSH_THEME="random"
-plugins=(git)
+plugins=(git z) # 注意此处不能有逗号
 source $ZSH/oh-my-zsh.sh
 
-# autojump
+# autojump 因为zsh有了z, 可以不再配置这个了
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 #杭锋提供了cnpm
