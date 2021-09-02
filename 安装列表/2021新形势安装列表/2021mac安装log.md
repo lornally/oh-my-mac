@@ -1,4 +1,15 @@
+### 0902
+
+```sh
+# 用z代替j
+# alias j= '(){z $1;}' 注意这个缩写不成立
+alias j='function f(){z "$1"};f'
+```
+
+
+
 ### 0901
+
 - 继续安装: brew install  qlimagesize suspicious-package   quicklook-csv quicklook-json qlcommonmark qlcolorcode qlstephen textmate typora  upic
 - 因为现在brew可以多进程了, 所以可以开多个terminal, 同时安装所有的包
 - 配置并启动了v2ray
