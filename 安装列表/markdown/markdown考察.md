@@ -1,0 +1,2 @@
+- typora各种bug
+- effie 其实是bear, 并不满足要求, 但是, 因为他免费, 因此可以替代bear
