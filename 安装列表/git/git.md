@@ -45,6 +45,17 @@ pbcopy < ~/.ssh/id_ed25519.pub
 ###### 配置示例
 
 ```ini
+[user]
+	email = catalina@17mbp.com
+	name = m的17寸mbp
+[core]
+  quotepath =false
+  editor=mate -w
+[pull]
+	rebase = true
+```
+
+```ini
 [user] 
 	name = bergman
 	email = machangkun1984@qq.com
