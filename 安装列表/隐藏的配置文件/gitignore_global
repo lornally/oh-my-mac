@@ -1,5 +1,11 @@
 # .开头的
 .*
+!.gitignore
+#不能忽略gitingnore配置文件:
+!.gitignor*
+
+# 正常文件夹就上面2条就OK了...........................
+# mac特色索引文件
 .DS_Store
 
 # ~结尾的
@@ -61,10 +67,6 @@ png/
 #不能忽略node的配置文件
 !package.json
 
-
-
-#不能忽略gitingnore配置文件:
-!.gitignor*
 
 
 #不能忽略所有markdown文件
