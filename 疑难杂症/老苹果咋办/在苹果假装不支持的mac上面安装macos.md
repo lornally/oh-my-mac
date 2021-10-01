@@ -22,10 +22,6 @@
   xcode-select --install
   sudo xattr -cr /Applications/Google\ Chrome.app
   sudo codesign -f -s - /Applications/Google\ Chrome.app
-  
-  # 可能其他软件的问题也可以解决
-  sudo xattr -cr /Applications/qBittorrent.app
-sudo codesign -f -s - /Applications/qBittorrent.app
   ```
   
 
