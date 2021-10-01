@@ -16,3 +16,7 @@ sudo codesign -f -s - /Applications/qBittorrent.app
 # 同一个答案下面有建议删除: ~/Application Support/qBittorrent/rss/articles/storage.lock .
 ```
 
+### 拿公开tracker
+
+- https://github.com/ngosang/trackerslist
+- 参考本项目的目录: 疑难杂症/下载bittorrent慢
