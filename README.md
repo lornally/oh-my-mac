@@ -94,3 +94,6 @@ mkdir ~/.nvm
 
 - 针对老苹果的文档: [老苹果咋办]
 
+### 参考
+
+- 不错的blog: https://www.igeeksblog.com/

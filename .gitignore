@@ -1,4 +1,8 @@
 
+# 忽略本身包含的git项目
+mac-pixel-clock-patch-V2
+
+
 .DS_Store
 mlib/
 *.log
