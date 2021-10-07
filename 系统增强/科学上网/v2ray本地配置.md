@@ -20,6 +20,8 @@ vscode /usr/local/etc/v2ray/config.json
 # /etc/v2ray/ 或 /usr/local/etc/v2ray/
 ```
 
+> 配置v2ray的时候要注意, 官方会给一个带注释的版本, 最好是直接用自己不带注释的版本覆盖下.
+
 ###### 执行
 
 ```sh
