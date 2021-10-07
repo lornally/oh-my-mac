@@ -36,7 +36,7 @@ ssh-keygen -t rsa -b 4096 -C "mac13寸2017@qq.com"
 pbcopy < ~/.ssh/id_rsa.pub
 
 # 新的写法有所不同
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "2021.10.07@mbp17.machangkun"
 pbcopy < ~/.ssh/id_ed25519.pub  
 ```
 

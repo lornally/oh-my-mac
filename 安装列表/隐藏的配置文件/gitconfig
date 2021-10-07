@@ -1,6 +1,6 @@
 [user] 
-	name = bergman
-	email = machangkun1984@qq.com
+	name = 马长昆17寸mbp
+	email = m2021.10.07@mbp17.local
 [core]
 	excludesfile = /Users/bergman/.gitignore_global
 	editor = mate --wait

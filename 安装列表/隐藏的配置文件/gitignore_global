@@ -1,8 +1,10 @@
 # .开头的
 .*
-!.gitignore
+# ~结尾的
+*~
+
 #不能忽略gitingnore配置文件:
-!.gitignor*
+!.gitignore
 
 # 正常文件夹就上面2条就OK了...........................
 # mac特色索引文件
@@ -11,8 +13,7 @@
 
 # 忽略本身包含的git项目
 mac-pixel-clock-patch-V2
-# ~结尾的
-*~  
+
 
 # nodejs的
 node_modules/
