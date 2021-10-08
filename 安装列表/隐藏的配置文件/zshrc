@@ -4,7 +4,7 @@ plugins=(git z) # 注意此处不能有逗号
 source $ZSH/oh-my-zsh.sh
 
 # autojump 因为zsh有了z, 可以不再配置这个了
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+#[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # 用z代替j
 # alias j= '(){z $1;}' 注意这个缩写不成立
