@@ -3,6 +3,18 @@
 - 弄个账号, 帮freemind签名
 - 解决quicklook插件的权限问题
 
+### 20211016
+
+- 新装的机器ql运行报错
+
+```sh
+“QLColorCode.qlgenerator” can’t be opened because Apple cannot check it for malicious software.
+# 一行命令解决
+sudo xattr -cr ~/Library/QuickLook/*.qlgenerator
+```
+
+- 参考: https://hargitai.co.nz/quicklook-plugin-qlgenerator-cant-be-opened-because-apple-cannot-check-it-for-malicious-software-fix-locally/
+
 ### 20211008
 
 - markdown的preview是白色的, 很神奇啊.

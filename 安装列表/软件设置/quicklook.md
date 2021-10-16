@@ -19,7 +19,10 @@ qlmanage -r cache
 qlmanage -m plugins
 qlmanage -l #列出所有quicklook
 
- qlmanage -p qulitest.mm #用这行代码就可以看到问题.
+qlmanage -p qulitest.mm #用这行代码就可以看到问题.
+ 
+# 解决权限问题
+sudo xattr -cr ~/Library/QuickLook/*.qlgenerator
 ```
 
 - 重新启动mac, 看到警告, 然后从[安全和隐私]这里允许他运行, 但是, 这个预览是白色的, 完全不能忍. 
