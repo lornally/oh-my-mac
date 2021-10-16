@@ -23,6 +23,11 @@ qlmanage -p qulitest.mm #用这行代码就可以看到问题.
  
 # 解决权限问题
 sudo xattr -cr ~/Library/QuickLook/*.qlgenerator
+
+# 解决权限问题的第二个办法, 如果不记得上面的指令, 那么可以到下面的目录, 右键执行:
+~/Library/Quicklook/QLStephen.qlgenerator/Contents/MacOS/
+
+# 解决权限第三个办法(苹果官方): 去系统管理->security&privacy, 可以看到xxx.qlgenerator was block ...
 ```
 
 - 重新启动mac, 看到警告, 然后从[安全和隐私]这里允许他运行, 但是, 这个预览是白色的, 完全不能忍. 
