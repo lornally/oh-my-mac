@@ -22,6 +22,10 @@
   - 贼复杂, 还要登录
 - Haroopad
   - 老式编辑器
+- https://github.com/laurent22/joplin/
+  - 支持brew安装
+  - 老式编辑器
+  - 不支持列表tab
 
 ###### 可以关注
 
