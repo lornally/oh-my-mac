@@ -1,3 +1,33 @@
+### 0917
+
+- 继续考察markdown编辑器
+- https://www.zhihu.com/people/oulvhai作品
+
+  - mweb 替代bear
+  - one markdown 替代typora
+
+###### 不推荐的
+
+- https://moeditor.js.org/
+
+  - 老式编辑器, 
+  - tab列表还非常不支持
+- simplenote
+
+  - App store可以下载
+  - 难受的是需要邮箱注册才能用
+  - 可以替代bear
+- https://boostnote.io/
+
+  - 贼复杂, 还要登录
+- Haroopad
+  - 老式编辑器
+
+###### 可以关注
+
+- https://github.com/notable/notable
+  - 列表的tab操作为0, 但是, 漂亮干净, 可以持续关注
+
 ### 0902
 
 ```sh
