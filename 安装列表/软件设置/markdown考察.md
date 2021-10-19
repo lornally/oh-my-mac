@@ -1,3 +1,37 @@
+### 0917
+
+###### 不推荐的
+
+- https://moeditor.js.org/
+
+  - 老式编辑器, 
+  - tab列表还非常不支持
+- simplenote
+
+  - App store可以下载
+  - 难受的是需要邮箱注册才能用
+  - 可以替代bear
+- https://boostnote.io/
+
+  - 贼复杂, 还要登录
+- Haroopad
+  - 老式编辑器
+- https://github.com/laurent22/joplin/
+  - 支持brew安装
+  - 老式编辑器
+  - 不支持列表tab
+
+###### 遗憾放弃的/后续可以关注
+
+- https://github.com/notable/notable
+  - 列表的tab操作为0, 但是, 漂亮干净, 可以持续关注
+- https://github.com/marktext/marktext
+  - 列表的tab操作有各种问题
+- https://github.com/benrbray/noteworthy
+  - 这个还在开发中, 可以关注
+- https://www.zhihu.com/people/oulvhai作品
+  - one markdown 替代typora, 无法替代, 和typora同样的毛病, 大文件无法保存
+
 ### 插件 
 
 - 2选一
