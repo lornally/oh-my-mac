@@ -86,3 +86,39 @@ Command + Shift + P打开搜索窗口，输入install package：
 }
 ```
 
+### 失焦保存和退出快照
+
+```js
+# 失去焦点保存
+// Set to true to automatically save files when switching to a different file
+// or application
+"save_on_focus_lost": true,
+# 禁止热退出, 这个热退出, 不做任何保存, 只是保存当前快照. 会导致遗漏提交
+// Exiting the application with hot_exit enabled will cause it to close
+// immediately without prompting. Unsaved modifications and open files will
+// be preserved and restored when next starting.
+//
+// Closing a window with an associated project will also close the window
+// without prompting, preserving unsaved changes in the workspace file
+// alongside the project.
+//
+// Hot exit has different modes to choose from:
+// - "always": Always perform a hot exit when the application exits. This
+//             includes when the last window is closed on relevant
+//             platforms.
+// - "only_on_quit": Only perform a hot exit when the application is asked
+//                   to exit, not when the last window is closed. This
+//                   setting is only used on Windows and Linux.
+// - "disabled": Disable hot exit.
+"hot_exit": "disabled",
+```
+
+
+
+### 自动双引号
+
+```js
+// Controls auto pairing of quotes, brackets etc
+"auto_match_enabled": false,
+```
+
