@@ -122,3 +122,18 @@ Command + Shift + P打开搜索窗口，输入install package：
 "auto_match_enabled": false,
 ```
 
+### 原本缩进代码不合理
+
+```js
+	{ "keys": ["tab"], "command": "indent" },
+	{ "keys": ["shift+tab"], "command": "unindent" },
+```
+
+
+
+### markdown列表自动
+
+- 安装插件就可以解决
+- User Guide is available at https://sublimetext-markdown.github.io/MarkdownEditing
+- Bugs or feedback via https://github.com/SublimeText-Markdown/MarkdownEditing/
+
