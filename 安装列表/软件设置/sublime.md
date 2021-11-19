@@ -134,6 +134,61 @@ Command + Shift + P打开搜索窗口，输入install package：
 ### markdown列表自动
 
 - 安装插件就可以解决
-- User Guide is available at https://sublimetext-markdown.github.io/MarkdownEditing
-- Bugs or feedback via https://github.com/SublimeText-Markdown/MarkdownEditing/
+  - User Guide is available at https://sublimetext-markdown.github.io/MarkdownEditing
+  - Bugs or feedback via https://github.com/SublimeText-Markdown/MarkdownEditing/
+- 样式最终用这个: agila theme
+
+### 可以选择安装的项目
+
+- markdown的preview, 其实没有卵用
+
+  - markdown preview
+  - livereload
+- 样式还可以安装这些
+
+  - 大神
+    - https://github.com/jonschlinkert/sublime-markdown-extended
+    - https://github.com/jonschlinkert/sublime-monokai-extended
+  - material theme
+  - theme spacegray
+  - ayu
+  - agila -> 这个是神作, 彻底解决markdown问题
+
+```js
+"color_scheme": "Packages/Agila Theme/Markdown/Oceanic Next Origin Markdown.tmTheme",
+"theme": "auto",
+```
+
+### 并没有试用过的theme
+
+- 下面这些并没有试用过, 空了再说
+  - gravity
+  - cyanide
+  - darkmatter
+  - afterglow
+  - predawn
+  - brogrammer
+  - gruvbox
+  - github theme
+  - devastate
+  - dracula
+
+### 几个附加设置
+
+```js
+//使用空格代替tab
+"translate_tabs_to_spaces": true,
+//不要在保存时自动格式化
+"save_on_beautify": false,
+```
+
+### 解决ruby格式不正确问题
+
+- ruby的自动格式会错误的跟随注释comment的缩进
+- 需要安装插件解决: beautify_ruby
+- 默认的快捷键很磕碜, 可以这样修改: 
+
+```js
+	{ "keys": ["alt+tab"], "command": "beautify_ruby" },
+```
 
