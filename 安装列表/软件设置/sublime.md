@@ -192,3 +192,37 @@ Command + Shift + P打开搜索窗口，输入install package：
 	{ "keys": ["alt+tab"], "command": "beautify_ruby" },
 ```
 
+### 快捷键设置, 指定文件类型
+
+```ruby
+# 如果两个定义冲突, 那么必须这样, 写好, 写成避免冲突的写法
+{ 
+  "keys": ["alt+tab"],
+  "command": "beautify_ruby", 
+  "context": { "key": "selector",
+    "operator": "equal", 
+    "operand": "source.rb, source.ruby" }
+
+  },
+{
+  "keys": ["alt+tab"],
+  "command": "reindent", 
+  "args": {
+    "single_line": false
+    },
+  "context": { "key": "selector",
+    "operator": "not_equal", 
+    "operand": "source.rb, source.ruby" }
+  },
+```
+
+### 退出时自动保存工作状态
+
+- 保存工作状态, 同时还要提示未保存文件
+- 完美的答案, 关掉hot_exti, 打开remember_open_files
+
+```ruby
+	"hot_exit": "disabled",
+	"remember_open_files": true,
+```
+
