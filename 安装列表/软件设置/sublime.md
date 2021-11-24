@@ -1,3 +1,8 @@
+### 和alt-tab兼容
+
+- 因为alt-tab占用了快捷键
+- 因此, 格式化的快捷键调整为: ctrl + shift
+
 ### 支持中文
 
 ```sh
@@ -11,8 +16,6 @@ Command + Shift + P打开搜索窗口，输入install package：
 安装之后会有一个菜单项file -> gbk2utf8
 # https://github.com/seanliang/ConvertToUTF8/blob/master/README.zh_CN.md
 ```
-
-
 
 ### 格式化代码
 
