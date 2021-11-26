@@ -1,3 +1,44 @@
+### 20211126
+
+### markdown最终方案: sublime + 3个样式插件
+
+- 参考sublime配置
+
+#### markdown补充安装
+
+> 参考: https://zhuanlan.zhihu.com/p/208791140
+
+- 替代bear/ulysses
+
+  - https://www.effie.co/
+  - https://github.com/Zettlr/Zettlr
+    - 支持brew
+  - mweb https://www.zhihu.com/people/oulvhai作品
+
+- 替代typora
+
+  - https://github.com/vnotex/vnote/blob/master/README_zh_CN.md
+    - 初体验不错
+    - 修改主题要重新启动编辑器, 但是没有任何提示
+    - 支持brew安装, brew安装的版本很老, 建议github安装
+    - tab支持的不是特别充分
+    - mac全局快捷键支持的并不充分, 例如cmd-w
+
+- vscode插件
+
+  - 同源的两个
+    - vscode all markdown [GitHub - TobiasTao/vscode-md: VSCode markdown extension](https://github.com/TobiasTao/vscode-md)
+    - Office Viewer https://github.com/vscode-ext-studio/vscode-office
+  - https://github.com/tejasvi/markless
+  - https://github.com/zaaack/vscode-markdown-editor
+
+- 浏览器插件
+
+  - [Vditor - 一款浏览器端的 Markdown 编辑器，支持所见即所得（富文本）、即时渲染（类似 Typora）和分屏预览模式](https://b3log.org/vditor/)
+  - http://ww1.epiceditor.com/
+
+  
+
 ### 0917
 
 ###### 不推荐的

@@ -139,7 +139,6 @@ Command + Shift + P打开搜索窗口，输入install package：
 - 安装插件就可以解决
   - User Guide is available at https://sublimetext-markdown.github.io/MarkdownEditing
   - Bugs or feedback via https://github.com/SublimeText-Markdown/MarkdownEditing/
-- 样式最终用这个: agila theme
 
 ### 可以选择安装的项目
 
@@ -152,8 +151,8 @@ Command + Shift + P打开搜索窗口，输入install package：
   - 大神
     - https://github.com/jonschlinkert/sublime-markdown-extended
     - https://github.com/jonschlinkert/sublime-monokai-extended
+    - https://www.positronx.io/best-sublime-text-3-themes/
   - material theme
-  - theme spacegray
   - ayu
   - agila -> 这个是神作, 彻底解决markdown问题
 
@@ -162,19 +161,66 @@ Command + Shift + P打开搜索窗口，输入install package：
 "theme": "auto",
 ```
 
-### 并没有试用过的theme
+- gravity, dark 还行
+- cyanide
+- darkmatter
+- afterglow, twilight还可以
+- predawn
+- devastate
+- afterglow, 一直认为加减号作为文件夹打开标记, 远远好于三角形
+- github, 彩色文件夹不正常
 
-- 下面这些并没有试用过, 空了再说
-  - gravity
-  - cyanide
-  - darkmatter
-  - afterglow
-  - predawn
-  - brogrammer
-  - gruvbox
-  - github theme
-  - devastate
-  - dracula
+### theme中比较好的
+
+- theme 文件夹显示明显
+  - ayu
+  - meterial
+- color theme
+  - 支持markdown, 同时, 区分正则和字符串
+    - material, theme
+  - 不区分正则和字符串
+    - afterglow
+    - agila, 
+      - 有多个支持markdown的样式, 
+      - 推荐: oceanic next markdown
+    - dracula
+    - monokaiC 
+    - mariana
+    - monokai 正则和markdown不可得兼
+  - 不区分正则, 同时markdown引用不正常
+    - gruvbox, ndc dark 很棒啊.
+    - github, dark 大概是习惯了, 这个觉得很舒服
+  - markdown 的引用显示不正常, 区分正则
+    - 可用
+      - theme spacegray, base16 eighties 也不错
+      - cyanide, twilight black等等都不错
+      - afterglow, twilight还可以
+      - material
+      - agila originic next
+    - 暖色
+      - brogrammer, 比较夸张
+      - ayu
+      - github, dark legacy
+      - predawn
+      - monokai extended
+
+### 由此, 需要区分markdown和code的显示
+
+- 打开一个markdown文件
+- 菜单: Preferences / Settings More / Syntax Specific
+
+```ruby
+{"color_scheme": "Packages/Agila Theme/Markdown/Oceanic Next Markdown.tmTheme",
+  }
+# 参考: https://hiltmon.com/blog/2012/11/07/multiple-themes-in-sublime-text-2/
+# 如果安装了markdowneditor, 那么此处有markdown的theme示例
+```
+
+### 最终选择
+
+- 整应用: ayu, dark
+- color_markdown: agila, Oceanic Next
+- color_默认: cyanide, twilight
 
 ### 几个附加设置
 
