@@ -241,7 +241,28 @@ Command + Shift + P打开搜索窗口，输入install package：
 	{ "keys": ["alt+tab"], "command": "beautify_ruby" },
 ```
 
-### 快捷键设置, 指定文件类型
+### 快捷键设置
+###### 针对不同的插件
+> 参考: https://stackoverflow.com/questions/27325002/sublime-text-editor-change-plugin-hotkey
+> console方案: https://stackoverflow.com/questions/23083454/how-do-i-create-a-key-binding-shortcut-to-run-a-custom-package-plugin-in-subli
+> 菜单方案: https://stackoverflow.com/questions/25885473/sublime-text-how-to-add-a-key-binding-to-hex-viewer-package-command
+1. 方式一, 寻找sublime-keymap
+  2. 通过菜单打开package文件目录: Menu->Preferences->Browse packages.
+  2. 用package control打开目录: Cmd-Shift-P -> Package Control: list packages
+  3. 打开sublime-keymap, 就可以看到修改的参考了
+4. 如果上面找不到keymap, 那么可以用更基础的方式: 
+  5. 打开ST console 
+  6. 输入 sublime.log_commands(True)
+  7. 执行命令操作, 从console里面就可以看到command名字了
+8. 方式3, 通过菜单能找到你需要修改的keymap
+  9. Package Settings 
+  10. 找到你的应用 
+  11. Key Bindings 
+  12. Default, 注意这里要打开default, 因为要参考command是啥, 
+    13. 不能直接开user, user大概率是空的, 啥都没有
+    14. 也可能开的, 就是你自己的keymap的user设置, 当然没有需要设置的command
+
+###### 指定文件类型
 
 ```ruby
 # 如果两个定义冲突, 那么必须这样, 写好, 写成避免冲突的写法
