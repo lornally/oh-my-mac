@@ -187,6 +187,7 @@ Command + Shift + P打开搜索窗口，输入install package：
     - monokaiC 
     - mariana
     - monokai 正则和markdown不可得兼
+    - ayu
   - 不区分正则, 同时markdown引用不正常
     - gruvbox, ndc dark 很棒啊.
     - github, dark 大概是习惯了, 这个觉得很舒服
@@ -219,7 +220,9 @@ Command + Shift + P打开搜索窗口，输入install package：
 ### 最终选择
 
 - 整应用: ayu, dark
-- color_markdown: agila, Oceanic Next 替换->  "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+- color_markdown: agila, Oceanic Next 
+  - 替换->  "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+  - 最终:   "color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 - color_默认: cyanide, twilight "color_scheme": "Packages/Theme - Cyanide/Twilightcyanide.tmTheme",
 
 
