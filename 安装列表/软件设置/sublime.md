@@ -178,7 +178,7 @@ Command + Shift + P打开搜索窗口，输入install package：
 - color theme
   - 支持markdown, 同时, 区分正则和字符串
     - material, theme
-  - 不区分正则和字符串
+  - 不区分正则和字符串, markdown正常
     - afterglow
     - agila, 
       - 有多个支持markdown的样式, 
@@ -219,8 +219,8 @@ Command + Shift + P打开搜索窗口，输入install package：
 ### 最终选择
 
 - 整应用: ayu, dark
-- color_markdown: agila, Oceanic Next
-- color_默认: cyanide, twilight
+- color_markdown: agila, Oceanic Next 替换->  "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+- color_默认: cyanide, twilight "color_scheme": "Packages/Theme - Cyanide/Twilightcyanide.tmTheme",
 
 
 ### 自定义color-theme 颜色模板/皮肤/主题/样式/模式
@@ -247,6 +247,42 @@ Command + Shift + P打开搜索窗口，输入install package：
 }]}
 ```
 
+### 自定义markdown的color-theme
+- 先把需要弄得theme做成默认theme, 然后, custom-color-theme, 这样就找到了可以定制的文件, 然后可以设置回去
+- 参考: https://www.rockoder.com/2020/10/01/sublime-markdown-vscode-syntax/
+```js
+ "rules":
+ [
+  //这个生效
+  {
+   "scope": "markup.list.unnumbered.markdown",
+   "foreground": "#8ec",
+ },
+ { //这里定义的也是无序列表的符号颜色
+   "scope": " markup.list.unnumbered.bullet.markdown",
+   "foreground": "#e6e",
+ },
+
+ { //这里是有序列表的符号颜色
+   "scope": " markup.list.numbered.bullet.markdown",
+   "foreground": "#8ec",
+ },
+
+ {//这个生效, 但是foreground不生效
+   "scope": "markup.list.numbered.markdown",
+   "foreground": "#000",
+ },
+
+//因为定义了这个, 导致上面的forground不生效
+ { //这个定义了所有列表的文字颜色, 
+
+   "scope": "meta.paragraph.list.markdown",
+   "foreground": ""
+ },
+
+//所以废弃之前的Markdown的特殊定义. 改为在正常theme里面定义markdown
+
+```
 
 ### 几个附加设置
 

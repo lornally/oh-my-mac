@@ -1,3 +1,5 @@
+
+```js
 // Documentation at https://www.sublimetext.com/docs/color_schemes.html
 {"variables":{},
 "globals":{
@@ -18,3 +20,4 @@
  "scope": "comment.line, punctuation.definition.comment.line",
  "foreground": "#a79"
 }]}
+```
