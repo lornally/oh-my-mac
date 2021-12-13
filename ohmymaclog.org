@@ -1,0 +1,34 @@
+> 20210517 发现宝藏, vscode的org mode插件
+
+测试下修改
+
+* 20210517
+  * 发现org
+  * 测试一下
+    * 这个可以吗?
+    * todo  otoeuoe
+    * oeuaeouoe
+    ** oeuaeouoe´ØoØs
+    *** oeueoueoauaeo []
+    - oeuoeu
+    1. aoeueou
+    
+* oeuoeau
+** oueouoe
+*** eouaoeuaoe
+**** oeuaeoueoau
+
+
+
+# ooeaueouaeou
+* ouaeouaoeu
+1. eeuaoeu
+1. oueou
+11. eouaoeuoe
+1) oaeuaoeuaeo
+- aoeuaeoueoau
+- ouaoeueoauoeau
+
+1. aoeueoau
+2. oeuaoeu
+1.oaeuaeou
