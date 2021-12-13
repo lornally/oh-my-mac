@@ -1,7 +1,8 @@
 ### 和alt-tab兼容
 
 - 因为alt-tab占用了快捷键
-- 因此, 格式化的快捷键调整为: ctrl + shift
+- 格式化的快捷键调整为: alt + space
+- 自动补全调整为: ctrl+shift
 
 ### 支持中文
 

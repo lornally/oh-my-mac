@@ -1,0 +1,65 @@
+```sh
+ssh -p 22 root@10.1.7.42
+
+# 服务器
+cd ~
+cd .ssh
+vi authorized_keys
+
+# 如果之前copy上来了, 可以直接用cat
+cat id_rsa.pub >> authorized_keys
+
+# 需要确保权限
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+# 查看权限
+ll
+
+# wiki安装位置(一般情况下)
+cd /var/www/html
+
+# 从服务器下载文件
+scp -r root@10.1.7.42:/var/www/html/mediawiki-1.37.0.tar.gz ./mediawiki-1.37.0.tar.gz
+
+
+# apache 是包含在苹果的系统内的
+sudo apachectl graceful
+
+# 此时chrome: http://localhost/
+
+
+
+# Nginx呢?
+```
+
+
+### 本地处理
+```sh
+# 准备mediawiki
+scp -r root@10.1.7.42:/var/www/html/mediawiki-1.37.0.tar.gz ./mediawiki-1.37.0.tar.gz
+
+# 验证apache
+sudo apachectl graceful
+# 配置文件位置
+code /etc/apache2/httpd.conf
+# 默认站点根位置
+cd /Library/WebServer/Documents/
+
+# 安装php
+ brew install php
+
+# 安装mysql
+
+
+```
+
+
+
+### 服务端
+
+```sh
+# 把localsetting copy回本地, 可以看设置
+# 并且可以删除服务端的localsetting, 然后, 重新配置wiki
+
+```
