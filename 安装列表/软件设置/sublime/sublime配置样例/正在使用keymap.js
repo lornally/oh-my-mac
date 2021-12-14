@@ -34,9 +34,9 @@
  {
   "keys": ["ctrl"],
   "command": "emmet_expand_abbreviation",
-  "context": { "key": "selector",
+  "context": [{ "key": "selector",
    "operator": "equal", 
-  "operand": "source.html, source.htm" }
+  "operand": "source.html, source.htm" }]
  },
  { "keys": ["ctrl"], 
   "command": "commit_completion", 

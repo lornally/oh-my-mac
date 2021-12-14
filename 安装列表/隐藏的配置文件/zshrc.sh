@@ -1,10 +1,10 @@
 export ZSH="/Users/machangkun/.oh-my-zsh"
 ZSH_THEME="random"
-plugins=(git z) # 注意此处不能有逗号
+plugins=(git z  safe-paste) # 注意此处不能有逗号
 source $ZSH/oh-my-zsh.sh
 
 # autojump 因为zsh有了z, 可以不再配置这个了
-#[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # 用z代替j
 # alias j= '(){z $1;}' 注意这个缩写不成立
@@ -36,3 +36,17 @@ alias pip="pip --proxy 127.0.0.1:1087"
 
 # vscode代理
 alias vscode="code --proxy-server='http://127.0.0.1:1087'"
+
+
+# 设置java
+# export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+
+alias odps="/Users/machangkun/git/work/pandak/项目/数据任务3odps_doing/odpscmd_public/bin/odpscmd"
+
+
+# 设置sublime的命令行缩写, 原本的太磕碜了
+alias lime="subl"

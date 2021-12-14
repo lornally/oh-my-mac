@@ -41,17 +41,28 @@ scp -r root@10.1.7.42:/var/www/html/mediawiki-1.37.0.tar.gz ./mediawiki-1.37.0.t
 
 # 验证apache
 sudo apachectl graceful
+apachectl -v # 查看版本
 # 配置文件位置
-code /etc/apache2/httpd.conf
+subl /etc/apache2/httpd.conf
 # 默认站点根位置
 cd /Library/WebServer/Documents/
 
 # 安装php
  brew install php
 
-# 安装mysql
+# 安装ImageMagick
+brew install ImageMagick
+
+# 安装parsoid
+# 1.35 lts不需要, 1.36之后需要下面的配置在localsetting
+wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
+
+# 安装sqlite
+# 四选一: MySQL MariaDB PostgreSQL SQLite
+brew install sqlite
 
 
+# 所以考虑下载1.35lts版本
 ```
 
 

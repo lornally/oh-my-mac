@@ -1,6 +1,9 @@
 > 20210517 发现宝藏, vscode的org mode插件
+> 20211214 sublime的org插件
 
-测试下修改
+* 20211214
+  * sublime的org插件貌似可以用
+
 
 * 20210517
   * 发现org
@@ -31,4 +34,6 @@
 
 1. aoeueoau
 2. oeuaoeu
-1.oaeuaeou
+1. oaeuaeou
+
+

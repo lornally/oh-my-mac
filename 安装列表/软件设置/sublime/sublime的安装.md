@@ -1,3 +1,8 @@
+### 命令行使用sublime
+```sh
+# nice, 2021了这事很简单了
+subl hs_err_pid15028.log 
+```
 ### 和alt-tab兼容
 
 - 因为alt-tab占用了快捷键
@@ -34,18 +39,18 @@ Command + Shift + P打开搜索窗口，输入install package：
   },
   //去除enter的选择autocomplete功能
   { "keys": ["enter"], "command": "noop", "context":
-   [
-     { "key": "auto_complete_visible" },
-     { "key": "setting.auto_complete_commit_on_tab", "operand": false }
-   ]
-  },
+  [
+  { "key": "auto_complete_visible" },
+  { "key": "setting.auto_complete_commit_on_tab", "operand": false }
+  ]
+},
   //把自动补全功能给shift
   { "keys": ["shift"], "command": "commit_completion", "context":
-   [
-     { "key": "auto_complete_visible" },
-     { "key": "setting.auto_complete_commit_on_tab", "operand": false }
-   ]
-  },
+  [
+  { "key": "auto_complete_visible" },
+  { "key": "setting.auto_complete_commit_on_tab", "operand": false }
+  ]
+},
   //给tab在自动补全中跳转的功能
   {
     "keys": ["tab"],
@@ -61,14 +66,14 @@ Command + Shift + P打开搜索窗口，输入install package：
   },
   //去除原本的tab补全功能
   { "keys": ["tab"], "command": "noop", "args": {"mini": true, "default": "\t"},
-   "context":
-   [
-     { "key": "auto_complete_visible", "operand": false },
-     { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-     { "key": "setting.tab_completion", "operator": "equal", "operand": true },
-     { "key": "preceding_text", "operator": "regex_match", "operand": ".*\\w", "match_all": true },
-   ]
-  },
+  "context":
+  [
+  { "key": "auto_complete_visible", "operand": false },
+  { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+  { "key": "setting.tab_completion", "operator": "equal", "operand": true },
+  { "key": "preceding_text", "operator": "regex_match", "operand": ".*\\w", "match_all": true },
+  ]
+},
 
 ]
 
@@ -129,8 +134,8 @@ Command + Shift + P打开搜索窗口，输入install package：
 ### 原本缩进代码不合理
 
 ```js
-	{ "keys": ["tab"], "command": "indent" },
-	{ "keys": ["shift+tab"], "command": "unindent" },
+{ "keys": ["tab"], "command": "indent" },
+{ "keys": ["shift+tab"], "command": "unindent" },
 ```
 
 
@@ -138,24 +143,24 @@ Command + Shift + P打开搜索窗口，输入install package：
 ### markdown列表自动
 
 - 安装插件就可以解决
-  - User Guide is available at https://sublimetext-markdown.github.io/MarkdownEditing
-  - Bugs or feedback via https://github.com/SublimeText-Markdown/MarkdownEditing/
+- User Guide is available at https://sublimetext-markdown.github.io/MarkdownEditing
+- Bugs or feedback via https://github.com/SublimeText-Markdown/MarkdownEditing/
 
 ### 可以选择安装的项目
 
 - markdown的preview, 其实没有卵用
 
-  - markdown preview
-  - livereload
+- markdown preview
+- livereload
 - 样式还可以安装这些
 
-  - 大神
-    - https://github.com/jonschlinkert/sublime-markdown-extended
-    - https://github.com/jonschlinkert/sublime-monokai-extended
-    - https://www.positronx.io/best-sublime-text-3-themes/
-  - material theme
-  - ayu
-  - agila -> 这个是神作, 彻底解决markdown问题
+- 大神
+- https://github.com/jonschlinkert/sublime-markdown-extended
+- https://github.com/jonschlinkert/sublime-monokai-extended
+- https://www.positronx.io/best-sublime-text-3-themes/
+- material theme
+- ayu
+- agila -> 这个是神作, 彻底解决markdown问题
 
 ```js
 "color_scheme": "Packages/Agila Theme/Markdown/Oceanic Next Origin Markdown.tmTheme",
@@ -174,37 +179,37 @@ Command + Shift + P打开搜索窗口，输入install package：
 ### theme中比较好的
 
 - theme 文件夹显示明显
-  - ayu
-  - meterial
+- ayu
+- meterial
 - color theme
-  - 支持markdown, 同时, 区分正则和字符串
-    - material, theme
-  - 不区分正则和字符串, markdown正常
-    - afterglow
-    - agila, 
-      - 有多个支持markdown的样式, 
-      - 推荐: oceanic next markdown
-    - dracula
-    - monokaiC 
-    - mariana
-    - monokai 正则和markdown不可得兼
-    - ayu
-  - 不区分正则, 同时markdown引用不正常
-    - gruvbox, ndc dark 很棒啊.
-    - github, dark 大概是习惯了, 这个觉得很舒服
-  - markdown 的引用显示不正常, 区分正则
-    - 可用
-      - theme spacegray, base16 eighties 也不错
-      - cyanide, twilight black等等都不错
-      - afterglow, twilight还可以
-      - material
-      - agila originic next
-    - 暖色
-      - brogrammer, 比较夸张
-      - ayu
-      - github, dark legacy
-      - predawn
-      - monokai extended
+- 支持markdown, 同时, 区分正则和字符串
+- material, theme
+- 不区分正则和字符串, markdown正常
+- afterglow
+- agila, 
+- 有多个支持markdown的样式, 
+- 推荐: oceanic next markdown
+- dracula
+- monokaiC 
+- mariana
+- monokai 正则和markdown不可得兼
+- ayu
+- 不区分正则, 同时markdown引用不正常
+- gruvbox, ndc dark 很棒啊.
+- github, dark 大概是习惯了, 这个觉得很舒服
+- markdown 的引用显示不正常, 区分正则
+- 可用
+- theme spacegray, base16 eighties 也不错
+- cyanide, twilight black等等都不错
+- afterglow, twilight还可以
+- material
+- agila originic next
+- 暖色
+- brogrammer, 比较夸张
+- ayu
+- github, dark legacy
+- predawn
+- monokai extended
 
 ### 由此, 需要区分markdown和code的显示
 
@@ -213,7 +218,7 @@ Command + Shift + P打开搜索窗口，输入install package：
 
 ```ruby
 {"color_scheme": "Packages/Agila Theme/Markdown/Oceanic Next Markdown.tmTheme",
-  }
+}
 # 参考: https://hiltmon.com/blog/2012/11/07/multiple-themes-in-sublime-text-2/
 # 如果安装了markdowneditor, 那么此处有markdown的theme示例
 ```
@@ -222,8 +227,8 @@ Command + Shift + P打开搜索窗口，输入install package：
 
 - 整应用: ayu, dark
 - color_markdown: agila, Oceanic Next 
-  - 替换->  "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-  - 最终:   "color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+- 替换->  "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+- 最终:   "color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 - color_默认: cyanide, twilight "color_scheme": "Packages/Theme - Cyanide/Twilightcyanide.tmTheme",
 
 
@@ -242,12 +247,12 @@ Command + Shift + P打开搜索窗口，输入install package：
  "foreground": "#b9b"
 },
 {"name": "Comment_multi",
- "scope": "comment.block, punctuation.definition.comment.block",
- "foreground": "#b8b"
+"scope": "comment.block, punctuation.definition.comment.block",
+"foreground": "#b8b"
 },
 {"name": "Comment_single",
- "scope": "comment.line, punctuation.definition.comment.line",
- "foreground": "#a9a"
+"scope": "comment.line, punctuation.definition.comment.line",
+"foreground": "#a9a"
 }]}
 ```
 
@@ -255,8 +260,8 @@ Command + Shift + P打开搜索窗口，输入install package：
 - 先把需要弄得theme做成默认theme, 然后, custom-color-theme, 这样就找到了可以定制的文件, 然后可以设置回去
 - 参考: https://www.rockoder.com/2020/10/01/sublime-markdown-vscode-syntax/
 ```js
- "rules":
- [
+"rules":
+[
   //这个生效
   {
    "scope": "markup.list.unnumbered.markdown",
@@ -304,7 +309,7 @@ Command + Shift + P打开搜索窗口，输入install package：
 - 默认的快捷键很磕碜, 可以这样修改: 
 
 ```js
-	{ "keys": ["alt+tab"], "command": "beautify_ruby" },
+{ "keys": ["alt+tab"], "command": "beautify_ruby" },
 ```
 
 ### 快捷键设置
@@ -313,20 +318,20 @@ Command + Shift + P打开搜索窗口，输入install package：
 > console方案: https://stackoverflow.com/questions/23083454/how-do-i-create-a-key-binding-shortcut-to-run-a-custom-package-plugin-in-subli
 > 菜单方案: https://stackoverflow.com/questions/25885473/sublime-text-how-to-add-a-key-binding-to-hex-viewer-package-command
 1. 方式一, 寻找sublime-keymap
-  2. 通过菜单打开package文件目录: Menu->Preferences->Browse packages.
-  2. 用package control打开目录: Cmd-Shift-P -> Package Control: list packages
-  3. 打开sublime-keymap, 就可以看到修改的参考了
+2. 通过菜单打开package文件目录: Menu->Preferences->Browse packages.
+2. 用package control打开目录: Cmd-Shift-P -> Package Control: list packages
+3. 打开sublime-keymap, 就可以看到修改的参考了
 4. 如果上面找不到keymap, 那么可以用更基础的方式: 
-  5. 打开ST console 
-  6. 输入 sublime.log_commands(True)
-  7. 执行命令操作, 从console里面就可以看到command名字了
+5. 打开ST console 
+6. 输入 sublime.log_commands(True)
+7. 执行命令操作, 从console里面就可以看到command名字了
 8. 方式3, 通过菜单能找到你需要修改的keymap
-  9. Package Settings 
-  10. 找到你的应用 
-  11. Key Bindings 
-  12. Default, 注意这里要打开default, 因为要参考command是啥, 
-    13. 不能直接开user, user大概率是空的, 啥都没有
-    14. 也可能开的, 就是你自己的keymap的user设置, 当然没有需要设置的command
+9. Package Settings 
+10. 找到你的应用 
+11. Key Bindings 
+12. Default, 注意这里要打开default, 因为要参考command是啥, 
+13. 不能直接开user, user大概率是空的, 啥都没有
+14. 也可能开的, 就是你自己的keymap的user设置, 当然没有需要设置的command
 
 ###### 指定文件类型
 
@@ -337,28 +342,28 @@ Command + Shift + P打开搜索窗口，输入install package：
   "command": "beautify_ruby", 
   "context": { "key": "selector",
     "operator": "equal", 
-    "operand": "source.rb, source.ruby" }
-
-  },
+    "operand": "source.rb, source.ruby" 
+  }
+},
 {
   "keys": ["alt+tab"],
   "command": "reindent", 
   "args": {
     "single_line": false
-    },
+  },
   "context": { "key": "selector",
     "operator": "not_equal", 
-    "operand": "source.rb, source.ruby" }
-  },
+    "operand": "source.rb, source.ruby" 
+  }
+},
 ```
-
 ### 退出时自动保存工作状态
 
 - 保存工作状态, 同时还要提示未保存文件
 - 完美的答案, 关掉hot_exti, 打开remember_open_files
 
 ```ruby
-	"hot_exit": "disabled",
-	"remember_open_files": true,
+"hot_exit": "disabled",
+"remember_open_files": true,
 ```
 
