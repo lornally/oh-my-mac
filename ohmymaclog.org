@@ -1,6 +1,12 @@
 > 20210517 发现宝藏, vscode的org mode插件
 > 20211214 sublime的org插件
 
+
+* 20211217
+  * 修改apache的配置
+    - /etc/httpd/conf/httpd.conf
+    - 改ServerName 并没有什么用
+    - systemctl restart httpd 重启服务也没有效果
 * 20211214
   * sublime的org插件貌似可以用
 
