@@ -50,3 +50,7 @@ alias odps="/Users/machangkun/git/work/pandak/项目/数据任务3odps_doing/odp
 
 # 设置sublime的命令行缩写, 原本的太磕碜了
 alias lime="subl"
+
+# 设置notebook的alias
+alias pn="ipython notebook"
+alias pnn="jupyter notebook --notebook-dir=/Users/machangkun/Documents/__ipython_notebook"
