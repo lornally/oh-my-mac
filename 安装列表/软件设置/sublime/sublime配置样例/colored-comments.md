@@ -1,12 +1,36 @@
 ### 设置, 可以不配
 - 增加了忽略大小写, 并不重要, 因为有几个都是符号, 不存在大小写问题
+- 注意, 这里如果改写某个标签, 一定要完整copy过来, 这样, 没修改的那些才能生效, 简单说, 就算没修改也要设置上
 ```json
 {
 
     // This is the list of tags/identifiers you want to highlight
     // in your code.
     "tags": {
-
+       "Important": {
+            // The name of the scope being use in your color scheme file
+            "scope": "comments.important",
+            // The actual identifier used to highlight the comments
+            "identifier": "!",
+            // Enables sublime.DRAW_SOLID_UNDERLINE
+            // Only noticable if outline = true
+            "underline": false,
+            // Enables sublime.DRAW_STIPPLED_UNDERLINE
+            // Only noticable if outline = true
+            "stippled_underline": false,
+            // Enables sublime.DRAW_SSQUIGGLY_UNDERLINE
+            // Only noticable if outline = true
+            "squiggly_underline": false,
+            // Enables sublime.DRAW_NO_FILL
+            // This disables coloring of text
+            // and allows for the outline of the text
+            "outline": false,
+            // Treats the identifier
+            // as an regular expression
+            "is_regex": false,
+            // Enables ignorecase for the ideentifier
+            "ignorecase": true,
+        },
         "Deprecated": {
             "scope": "comments.deprecated",
             "identifier": "*",
@@ -20,6 +44,12 @@
 
         },
 
+        "TODO": {
+            "scope": "comments.todo",
+            "identifier": "TODO[:]?|todo[:]?",
+            "is_regex": true,
+            "ignorecase": true,
+        },
         "FIXME": {
             "scope": "comments.fixme",
             "identifier": "FIXME[:]?|fixme[:]?",
