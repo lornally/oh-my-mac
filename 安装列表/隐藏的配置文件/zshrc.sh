@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # 用z代替j
 # alias j= '(){z $1;}' 注意这个缩写不成立
-alias j='function f(){z "$1"};f'
+# alias j='function f(){z "$1"};f'
 
 #杭锋提供了cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
