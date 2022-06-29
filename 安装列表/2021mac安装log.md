@@ -18,7 +18,15 @@ git -C "/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask" fetch --unshall
 # 根据提示
 git config --global --add safe.directory /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 
-# 同样操作services目录, 问题解决
+# 同样操作services目录, 问题解决, 官方的建议是:
+cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask 
+#and then post the output of 
+git remote -v
+
+# then
+brew untap homebrew/cask 
+# then 
+brew tap homebrew/cask.
 
 ```
 
