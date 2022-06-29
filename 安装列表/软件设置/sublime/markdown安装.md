@@ -2,7 +2,7 @@
 
 ### markdown列表自动
 
-- 安装插件就可以解决
+- 安装插件就可以解决: MarkdownEditing
   - User Guide is available at https://sublimetext-markdown.github.io/MarkdownEditing
   - Bugs or feedback via https://github.com/SublimeText-Markdown/MarkdownEditing/
 
