@@ -10,12 +10,15 @@
 ```sh
 brew update
 # 此时有报错:
-
+Warning: No remote 'origin' in /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core, skipping update!
+Warning: No remote 'origin' in /usr/local/Homebrew/Library/Taps/homebrew/homebrew-services, skipping update!
 
 # 根据: https://stackoverflow.com/questions/65160625/cant-update-or-upgrade-homebrew
 git -C "/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask" fetch --unshallow
+# 根据提示
+git config --global --add safe.directory /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
 
-
+# 同样操作services目录, 问题解决
 
 ```
 
