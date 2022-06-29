@@ -4,6 +4,23 @@
 - brew会提示, 找不到各种包
 - 尝试根据brew doctor的提示, 进行各种操作. 可能是科大的源有问题, 下次记得不要使用科大的源
 - 安装brew之后, 立刻执行brew doctor并仔细看返回结果
+- 记录一下: 完全重装系统还是有用的, 速度确实还不错, 用钉钉和搜狗做个测试
+
+##### 遇到问题
+```sh
+brew update
+# 此时有报错:
+
+
+# 根据: https://stackoverflow.com/questions/65160625/cant-update-or-upgrade-homebrew
+git -C "/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask" fetch --unshallow
+
+
+
+```
+
+
+
 
 ### 20220329
 - 搞定sublime的todo高亮, 这玩意需要不少配置, 尤其是我给markdown设置了不同的color theme, 因此, markdown的配置和正常不在一起, 这个是最晕的, 中间没有生效也是因为这个没注意, 估计是配到其他文件对应的color theme了
