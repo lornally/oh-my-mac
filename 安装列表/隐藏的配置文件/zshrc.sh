@@ -41,7 +41,7 @@ alias vscode="code --proxy-server='http://127.0.0.1:1087'"
 # 设置java
 # export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
 
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:/usr/local/opt/ruby/bin:/usr/local/anaconda3/bin:$PATH"
 # export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 
