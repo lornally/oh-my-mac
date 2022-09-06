@@ -3,12 +3,6 @@
 # nice, 2021了这事很简单了
 subl hs_err_pid15028.log 
 ```
-### 和alt-tab兼容
-
-- 因为alt-tab占用了快捷键
-- 格式化的快捷键调整为: alt + space
-- 自动补全调整为: ctrl+shift
-
 ### 支持中文
 
 ```sh
