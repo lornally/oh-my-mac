@@ -9,7 +9,10 @@ Host github.com
     ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p
 ```
 
+### 配置文件:  ~/.gitconfig
+
 ###### 用户名和中文路径
+
 ```sh
 [user]
 # Please adapt and uncomment the following lines:
@@ -25,18 +28,20 @@ Host github.com
 
 - 为了顺畅处理大文件, 需要安装这个:
   
-  ```sh
+```sh
   brew install git-lfs # 为了顺畅处理大文件, 需要安装这个.
-  ```
-  
-  - 上传key到github
+```
+
+#### github
+
+- 上传key到github
 
 ```sh
 ssh-keygen -t rsa -b 4096 -C "mac13寸2017@qq.com"
 pbcopy < ~/.ssh/id_rsa.pub
 
 # 新的写法有所不同
-ssh-keygen -t ed25519 -C "2021.10.07@mbp17.machangkun"
+ssh-keygen -t ed25519 -C "2022.11.07catalina@mbp15寸.2017版"
 pbcopy < ~/.ssh/id_ed25519.pub  
 ```
 
