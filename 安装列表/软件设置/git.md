@@ -15,9 +15,8 @@ Host github.com
 
 ```sh
 [user]
-# Please adapt and uncomment the following lines:
   name = bergman
-  email = bergman@17mbp.local
+  email = 2022.11.07catalina@mbp15寸.2017版
 [core]
   quotepath =false
 
