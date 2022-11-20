@@ -36,11 +36,12 @@ Host github.com
 - 上传key到github
 
 ```sh
-ssh-keygen -t rsa -b 4096 -C "mac13寸2017@qq.com"
+ssh-keygen -t rsa -b 4096 -C "2022.11.20.13.6寸24G2T星空@m2芯片.2022版.macbook.air"
 pbcopy < ~/.ssh/id_rsa.pub
 
 # 新的写法有所不同
-ssh-keygen -t ed25519 -C "2022.11.07catalina@mbp15寸.2017版"
+
+ssh-keygen -t ed25519 -C "2022.11.20.13.6寸24G2T星空@m2芯片.2022版.macbook.air"
 pbcopy < ~/.ssh/id_ed25519.pub  
 ```
 
