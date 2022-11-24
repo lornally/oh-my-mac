@@ -47,6 +47,7 @@ brew install qlimagesize suspicious-package   quicklook-csv quicklook-json qlcom
 ```sh
 #qlcommonmark的配置文件, 也可以直接copy到~目录.
 code ~/.cmqlstyle.css
+# 这个配置基本没用了, 很神奇, 删除之后, 效果更好
 ```
 
 - css无法预览, 重启一下试试. 
