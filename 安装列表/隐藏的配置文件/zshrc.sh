@@ -52,5 +52,6 @@ alias odps="/Users/machangkun/git/work/pandak/项目/数据任务3odps_doing/odp
 alias lime="subl"
 
 # 设置notebook的alias
-alias pn="ipython notebook"
+# alias pn="ipython notebook" 这个已经废弃 deprecated
+alias pnn="jupyter notebook"
 alias pnn="jupyter notebook --notebook-dir=/Users/machangkun/Documents/__ipython_notebook"
