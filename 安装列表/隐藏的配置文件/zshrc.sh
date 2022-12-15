@@ -48,10 +48,15 @@ export PATH="/usr/local/opt/openjdk/bin:/usr/local/opt/ruby/bin:/usr/local/anaco
 alias odps="/Users/machangkun/git/work/pandak/项目/数据任务3odps_doing/odpscmd_public/bin/odpscmd"
 
 
+
+# m1m2芯片的conda位置不同
+# 设置conda
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+
 # 设置sublime的命令行缩写, 原本的太磕碜了
 alias lime="subl"
 
 # 设置notebook的alias
 # alias pn="ipython notebook" 这个已经废弃 deprecated
-alias pnn="jupyter notebook"
+alias pn="jupyter notebook"
 alias pnn="jupyter notebook --notebook-dir=/Users/machangkun/Documents/__ipython_notebook"
