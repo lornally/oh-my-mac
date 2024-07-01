@@ -298,3 +298,6 @@ chflags -R nouchg .
 
 - https://stackoverflow.com/questions/16811547/debugging-quicklook-plugin-in-xcode-4-6
 - https://stackoverflow.com/questions/9412156/how-to-generate-core-dumps-in-mac-os-x
+
+
+
