@@ -1,4 +1,105 @@
-###### 基础思路
+
+### 0701
+* 痛定思痛, 决定不求人了, 自己搞quicklook, 自己搞mindmap
+
+* mindmap
+  * 有坑的概念, 点位固定
+  * 有坨的概念, 一坨点位之间关系紧密
+  * 一级的地位不同, 不论是是时间线, 鱼骨图, 还是架构图, 一级明显有不同的含义, 例如
+    * 时间线中, 一级是顺序执行的内容, 一级中的二级是并行的. 
+    * 简单的说, mindmap的本质是矩阵, 而不是简单列表, 或者说mindmap是列表, 但是列表是分层级的. 例如
+      * 正常的列表都有三个层级
+        * 标题, 在markdown里面是###
+        * 列表, 在markdown里面是*, -, +, 1.
+        * 内容, 在markdown里面是空格缩进
+      * mindmap也要这三个层级
+        * 一级对应标题
+        * 2, 3对应列表
+        * 更多层级对应内容, 列表和内容之间的区别需要斟酌下
+      * ppt的3个层级
+        * 一组页面
+        * 每页的标题, 副标题, 
+        * 每页的内容列表
+      * 语言有三个层级
+        * 名词
+        * 形容词
+        * 动词
+      * 如果3个大层级不解决问题, 那么应该导出这个分支成为独立的mindmap
+
+* todo
+  * 把quicklook和mindmap的内容都整理到一起
+
+
+### 202406 quicklook无效的问题
+* markdown
+* freeplane
+```sh
+# 安装对应插件
+brew install qlmarkdown
+# 下面重启相关服务
+qlmanage -r
+qlmanage -r cache
+killall Finder
+# 此时并未解问题, 需要到app目录, 打qlmarkdown.app才可以.
+
+# 这个曾经运行过
+xattr -cr ~/Library/QuickLook/*.qlgenerator
+```
+
+### 20240627
+* markdown按照上面的操作解决了. mm尚未解决.
+
+
+
+### 0701
+
+```sh
+# 卸载所有的quicklook插件
+brew uninstall qlcolorcode qlcommonmark qlimagesize qlstephen quicklook-csv    quicklook-json 
+# 关闭安全设置
+sudo spctl --master-disable
+
+# 安装所有quicklook插件
+brew install qlcolorcode qlcommonmark qlimagesize qlstephen quicklook-csv    quicklook-json qlmarkdown qlvideo suspicious-package 
+
+
+brew install qlcolorcode qlmarkdown quicklook-json qlimagesize qlvideo quicklook-csv qlstephen suspicious-package webpquicklook
+
+# 这个貌似失效了
+webpquicklook
+
+# 打开安全设置
+sudo spctl --master-enable
+
+
+
+
+```
+
+```sh
+# 443问题再次出现: 
+curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443 
+
+# 这一套没用, 之前弄过了
+mate  ~/.ssh/config
+# 修改内容: 
+Host github.com
+ Hostname ssh.github.com
+ Port 443
+
+# 尝试
+brew update
+brew upgrade curl
+brew upgrade openssl
+```
+
+* 回顾了一下, 在软件设置和疑难杂症中有不少quicklook的记录, 可能这个要自己弄一下
+
+
+
+
+
+##### 基础思路
 
 - 弄个账号, 帮freemind签名
 
@@ -300,4 +401,29 @@ chflags -R nouchg .
 - https://stackoverflow.com/questions/9412156/how-to-generate-core-dumps-in-mac-os-x
 
 
+### 2020-04-07 预览在catalina之后不能用了
+
+> freemind的预览(quicklook)功能突然不能用了, 一直以为是我的姿势不对. 原来是苹果搞的鬼.
+
+```sh
+qlmanage -p ./todolist.mm     [16:28:33] #这个命令是直接测试这个quicklook.
+Testing Quick Look preview with files:
+	./todolist.mm
+2020-04-07 16:28:48.642 qlmanage[88319:745521] ++ GeneratePreviewForURL
+2020-04-07 16:28:48.642 qlmanage[88319:745521] -[NSError init] called; this results in an invalid NSError instance. It will raise an exception in a future release. Please call errorWithDomain:code:userInfo: or initWithDomain:code:userInfo:. This message shown only once.
+2020-04-07 16:28:48.642 qlmanage[88319:745521] Input file is /Users/bergman/git/_X/_知网justdoit/2020editor/文档/todolist.mm
+2020-04-07 16:28:48.642 qlmanage[88319:745521] main bundle:NSBundle </Library/QuickLook/FreemindQL.qlgenerator> (loaded)
+2020-04-07 16:28:48.642 qlmanage[88319:745521] freemind location is:/Applications/FreeMind.app
+2020-04-07 16:28:48.642 qlmanage[88319:745521] freemind jar is:/Applications/FreeMind.app/Contents/Java/freemind.jar
+2020-04-07 16:28:48.643 qlmanage[88319:745521] JVM options is:-Xmx256m
+2020-04-07 16:28:51.054 qlmanage[88319:745521] image loaded
+2020-04-07 16:28:51.055 qlmanage[88319:745521] About to release pool
+2020-04-07 16:28:51.055 qlmanage[88319:745521] -- GeneratePreviewForURL
+2020-04-07 16:28:51.224 qlmanage[88319:745474] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9007, name = 'com.apple.coredrag'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2020-04-07 16:28:51.352 qlmanage[88319:745474] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xbc1f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes. #这个文件并不存在. 
+```
+
+没有办法, 给freemind官方提一下吧, 看看是否能解决: https://sourceforge.net/p/freemind/discussion/22102/thread/27ba8065f7/
 
