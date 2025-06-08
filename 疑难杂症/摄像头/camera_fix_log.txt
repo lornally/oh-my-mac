@@ -1,0 +1,22 @@
+Sun Jun  8 15:50:18 CST 2025: === 开始自动修复摄像头占用问题 ===
+Sun Jun  8 15:50:23 CST 2025: 初始摄像头占用进程数: 4
+Sun Jun  8 15:50:23 CST 2025: 当前占用摄像头的进程:
+Sun Jun  8 15:50:29 CST 2025:   进程: ControlCe (PID: 597)
+Sun Jun  8 15:50:29 CST 2025:   进程: avconfere (PID: 781)
+Sun Jun  8 15:50:29 CST 2025:   进程: WeChat (PID: 1399)
+Sun Jun  8 15:50:29 CST 2025:   进程: Google (PID: 3054)
+Sun Jun  8 15:50:29 CST 2025: 检测到Chrome进程，准备重启...
+Sun Jun  8 15:50:29 CST 2025: 建议手动保存Chrome标签页后继续
+Sun Jun  8 15:51:02 CST 2025: 用户确认重启Chrome
+Sun Jun  8 15:51:02 CST 2025: 正在关闭Chrome...
+Sun Jun  8 15:51:05 CST 2025: 使用优化参数重启Chrome...
+Sun Jun  8 15:51:07 CST 2025: Chrome已重启
+Sun Jun  8 15:51:07 CST 2025: 检测到WeChat进程
+Sun Jun  8 15:52:18 CST 2025: 用户确认退出WeChat
+Sun Jun  8 15:52:18 CST 2025: WeChat已退出
+Sun Jun  8 15:52:26 CST 2025: 修复后摄像头占用进程数: 2
+Sun Jun  8 15:52:26 CST 2025: 最终摄像头占用详情:
+Sun Jun  8 15:52:32 CST 2025:   进程: ControlCe (PID: 597)
+Sun Jun  8 15:52:32 CST 2025:   进程: avconfere (PID: 781)
+Sun Jun  8 15:52:32 CST 2025: ✅ 修复成功！摄像头占用已正常
+Sun Jun  8 15:52:32 CST 2025: === 自动修复完成 ===
