@@ -1,0 +1,394 @@
+{
+  "files.autoSave": "onFocusChange",
+  "jupyter.askForKernelRestart": false,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.md": "default",
+    "*.csv": "default"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "right"
+  },
+  "notebook.lineNumbers": "on",
+  "notebook.outline.showCodeCells": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.cs": "coffeescript",
+    "*.sqlbook": "sql",
+    "*.ndjson": "jsonl",
+    "*.dbclient-js": "javascript",
+    "*.plist": "xml",
+    "*.spec": "python",
+    ".pylintrc": "toml"
+  },
+  "emmet.includeLanguages": {
+    "wxml": "html",
+    "html": "html",
+    "htm": "html"
+  },
+  "editor.linkedEditing": true,
+  "[coffeescript]": {
+    "editor.tabSize": 1,
+    "editor.insertSpaces": true
+  },
+  "workbench.editor.enablePreview": false,
+  "[python]": {
+    //"editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnType": false,
+    "editor.formatOnSaveMode": "file", // "modifications",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff", //"eeyore.yapf",
+    //"editor.defaultFormatter": "ms-python.autopep8",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always", // 由 isort 负责
+      "source.fixAll": "always"
+    },
+    "files.trimTrailingWhitespace": false, // 别删
+    "editor.autoIndent": "full",
+  },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingOvertype": "never",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.suggest.showWords": true, // 显示单词补全
+  "editor.suggest.showSnippets": true, // 置顶代码片段
+  // "editor.suggest.order": "ascending",    // 按推荐度升序（语言服务通常优先级更高）
+  // "editor.suggestSelection": "recentlyUsed", // 最近使用项优先 ???
+  "terminal.integrated.enableMultiLinePasteWarning": "auto",
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.inheritEnv": false,
+  "editor.inlineSuggest.enabled": true, // 关闭内联建议 ???
+  "editor.suggest.filterGraceful": true, //确保补全高优先级.
+  "editor.suggest.localityBonus": true, // 确保当前影响增加???
+  "explorer.fileNesting.expand": false,
+  "explorer.sortOrder": "mixed",
+  "github.copilot.enable": {
+    "plaintext": true,
+    "scminput": true,
+    "*": true
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "gitlens.advanced.fileHistoryShowAllBranches": true,
+  "[troff]": {},
+  // "workbench.colorTheme": "One Dark Modern",
+  "editor.copyWithSyntaxHighlighting": false,
+  "wordcount_cjk.statusBarTextTemplate": "共 ${cjk} 字, ${total} 符",
+  "emmet.excludeLanguages": [],
+  "emmet.triggerExpansionOnTab": true,
+  // "http.proxy": "http://127.0.0.1:7890",
+  // "https.proxy": "http://127.0.0.1:7890",
+  // "github.copilot.advanced.proxyFromEnvironment": true,
+  "Lua.runtime.version": "LuaJIT", // LÖVE 使用 LuaJIT
+  "Lua.diagnostics.globals": [
+    "love"
+  ], // 识别 love 全局变量
+  "Lua.workspace.library": [
+    "/Applications/love.app/Contents/Resources"
+  ],
+  "Lua.workspace.checkThirdParty": false, //禁用第三方库检查
+  "codemetrics.basics.CodeLensHiddenUnder": 0,
+  "codemetrics.basics.DiagnosticsEnabled": true,
+  "codemetrics.luaconfiguration.BreakStatement": 0,
+  "codemetrics.luaconfiguration.ReturnStatement": 0,
+  "codemetrics.nodeconfiguration.BreakStatement": 0,
+  "codemetrics.nodeconfiguration.ContinueStatement": 0,
+  "codemetrics.nodeconfiguration.NewExpression": 1,
+  "codemetrics.nodeconfiguration.ReturnStatement": 0,
+  "codemetrics.nodeconfiguration.SourceFile": 1,
+  "codemetrics.nodeconfiguration.ClassDeclaration": 1,
+  "C_Cpp.copilotHover": "disabled",
+  "github.copilot.chat.followUps": "always",
+  "github.copilot.inlineSuggest.showByDefault": false,
+  "github.copilot.codeActions.enabled": false,
+  "eslint.options": {
+    "rules": {
+      "no-unused-expressions": "off"
+    }
+  },
+  "coffeelinter.defaultRules": {
+    "arrow_spacing": {
+      "level": "warn"
+    },
+    "braces_spacing": {
+      "level": "warn",
+      "spaces": 1,
+      "empty_object_spaces": 0
+    },
+    "camel_case_classes": {
+      "level": "warn"
+    },
+    "coffeescript_error": {
+      "level": "error"
+    },
+    "colon_assignment_spacing": {
+      "level": "warn",
+      "spacing": {
+        "left": 0,
+        "right": 1
+      }
+    },
+    "cyclomatic_complexity": {
+      "level": "warn",
+      "value": 15
+    },
+    "duplicate_key": {
+      "level": "error"
+    },
+    "empty_constructor_needs_parens": {
+      "level": "ignore"
+    },
+    "ensure_comprehensions": {
+      "level": "warn"
+    },
+    "eol_last": {
+      "level": "ignore"
+    },
+    "indentation": {
+      "value": 2,
+      "level": "ignore"
+    },
+    "line_endings": {
+      "level": "ignore",
+      "value": "unix"
+    },
+    "max_line_length": {
+      "value": 100,
+      "level": "warn",
+      "limitComments": true
+    },
+    "missing_fat_arrows": {
+      "level": "ignore",
+      "is_strict": false
+    },
+    "newlines_after_classes": {
+      "value": 3,
+      "level": "ignore"
+    },
+    "no_backticks": {
+      "level": "warn"
+    },
+    "no_debugger": {
+      "level": "warn",
+      "console": false
+    },
+    "no_empty_functions": {
+      "level": "ignore"
+    },
+    "no_empty_param_list": {
+      "level": "ignore"
+    },
+    "no_implicit_braces": {
+      "level": "ignore",
+      "strict": true
+    },
+    "no_implicit_parens": {
+      "level": "ignore",
+      "strict": true
+    },
+    "no_interpolation_in_single_quotes": {
+      "level": "ignore"
+    },
+    "no_nested_string_interpolation": {
+      "level": "warn"
+    },
+    "no_plusplus": {
+      "level": "ignore"
+    },
+    "no_private_function_fat_arrows": {
+      "level": "warn"
+    },
+    "no_stand_alone_at": {
+      "level": "ignore"
+    },
+    "no_tabs": {
+      "level": "ignore"
+    },
+    "no_this": {
+      "level": "ignore"
+    },
+    "no_throwing_strings": {
+      "level": "error"
+    },
+    "no_trailing_semicolons": {
+      "level": "error"
+    },
+    "no_trailing_whitespace": {
+      "level": "warn",
+      "allowed_in_comments": false,
+      "allowed_in_empty_lines": true
+    },
+    "no_unnecessary_double_quotes": {
+      "level": "ignore"
+    },
+    "no_unnecessary_fat_arrows": {
+      "level": "warn"
+    },
+    "non_empty_constructor_needs_parens": {
+      "level": "ignore"
+    },
+    "prefer_english_operator": {
+      "level": "ignore",
+      "doubleNotLevel": "ignore"
+    },
+    "space_operators": {
+      "level": "warn"
+    },
+    "spacing_after_comma": {
+      "level": "warn"
+    },
+    "transform_messes_up_line_numbers": {
+      "level": "warn"
+    }
+  },
+  "editor.fontFamily": "Zed-Mono-extralight-Extended",
+  "terminal.integrated.fontFamily": "monospace",
+  "window.systemColorTheme": "dark",
+  // "markdown.extension.syntax.plainTheme": true,
+  "editor.wordWrap": "on",
+  "editor.inlayHints.fontFamily": "Zed-Mono-Thin-Extended",
+  "diffEditor.codeLens": true,
+  "diffEditor.experimental.useTrueInlineView": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "workbench.sash.hoverDelay": 0,
+  "workbench.sash.size": 14,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "workbench.colorTheme": "zedme",
+  "qt.dir": "/Users/bergman/Qt",
+  "qt.toolchain": "auto",
+  //"python.linting.enabled": true,
+  //"python.linting.flake8Enabled": true,
+  //"python.linting.flake8Args": [
+  //  "--select=F632"
+  //],
+  "python.analysis.languageServerMode": "full",
+  "python.languageServer": "Pylance",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.supportAllPythonDocuments": true, // 或指定您使用的具体工具链
+  // "python.languageServer": "Pylance",
+  // "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportShadowedImports": "warning",
+    "reportMissingImports": "warning",
+    "reportMissingModuleSource": "warning",
+    "reportGeneralTypeIssues": "warning" // 确保类型错误显示
+  },
+  "python.analysis.typeCheckingMode": "strict",
+  // "python.analysis.typeCheckingMode": "basic", // 或 "strict" 根据需要调整
+  // "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.includeFileSpecs": [
+    "**/*.py",
+    "**/*.pyi"
+  ],
+  "python.analysis.stubPath": "./.porjectvenv/lib/python*/site-packages",
+  "python.analysis.extraPaths": [
+    "./.porjectvenv/lib/python*/site-packages"
+  ],
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "PySide6",
+      "depth": 3,
+      "includeAllSymbols": true
+    }
+  ],
+  //"python.commentPrefix": "#", //注释不要空格, 这样回来还是对的, 虽然是灰的, 但是, 他是生效的. 并不行, 因为保存时, ruff还是会自动加空格.
+  // "python.defaultInterpreterPath": "./.porjectvenv/bin/python",
+  "pylance.trace.server": "verbose",
+  "qtForPython.documentation": "PySide6",
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "debug.onTaskErrors": "showErrors",
+  "roo-cline.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show",
+    "npm test",
+    "npm install",
+    "tsc"
+  ],
+  "comments.visible": false,
+  "editor.comments.insertSpace": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "Lingma.DisplayLanguage": "简体中文",
+  "Lingma.PreferredLanguage for AI Chat": "简体中文",
+  "Lingma.PreferredLanguage forCommitMessage": "简体中文",
+  "editor.hover.above": false,
+  "editor.hover.enabled": true,
+  "editor.hover.sticky": true,
+  "markdown.occurrencesHighlight.enabled": true,
+  "workbench.colorCustomizations": {},
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": false,
+    "repositories": true,
+    "searchAndCompare": false,
+    "launchpad": true
+  },
+  //"editor.defaultFormatter": "ms-python.black-formatter",
+  //"notebook.defaultFormatter": "ms-python.black-formatter",
+  "Lingma.aI Chat.webToolsInAsk/AgentMode": "Ask every time",
+  "search.useGlobalIgnoreFiles": true,
+  "search.useParentIgnoreFiles": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "roo-cline.deniedCommands": [],
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "editor.formatOnSave": true,
+  "[toml]": {
+    "editor.formatOnSave": false
+  },
+  "gitlens.hovers.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.pullRequests.enabled": false,
+  "gitlens.hovers.autolinks.enabled": false,
+  "gitlens.hovers.autolinks.enhanced": false,
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.details": false,
+  "gitlens.hovers.currentLine.changes": false,
+  "gitlens.hovers.annotations.enabled": false,
+  "gitlens.hovers.annotations.details": false,
+  "gitlens.hovers.annotations.changes": false,
+  "editor.accessibilitySupport": "off"
+  // "qt-core.additionalQtPaths": [
+  //   {}
+  // ],
+  // "terminal.integrated.fontFamily": "Zed-Mono-Thin-Extended"
+  // "lua-local.interpreter": "lua5.1" // 可选，LÖVE API 路径
+  // "qml.format.enable": true,
+  // "qml.format.useTabs": false,
+  // "qml.format.indentWidth": 2,
+  // "qml.lint.enable": true,
+  // "[qml]": {
+  //   "editor.defaultFormatter": "theqtcompany.qt-qml",
+  // },
+  // "qt-core.qtInstallationRoot": "/Users/bergman/Qt",
+  // // Qt 相关配置
+  // "qt.toolsPath": "/Users/bergman/Qt/Tools",  // 您的 Qt Tools 路径
+  // "qt.version": "6.5.1",                    // 您的 Qt 版本
+  // "qml.languageServerPath": "/Users/bergman/Qt/6.9.0/macos/bin/qmlls",
+  // "qml.format.command": "/Users/bergman/Qt/6.9.0/macos/bin/qmlformat",
+  // "qml.format.extraArguments": ["-n"]  // 格式化参数
+}

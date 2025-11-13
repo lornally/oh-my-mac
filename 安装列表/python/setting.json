@@ -1,0 +1,60 @@
+{
+  "python.defaultInterpreterPath": "/Users/bergman/.pysidenv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": [
+    //"${workspaceFolder}",
+    //"/Users/bergman/.pysidenv/lib/python*/site-packages"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportShadowedImports": "error", //重复定义了导入
+    //"reportMissingImports": "error", //无法解析导入语句 默认就是error
+    "reportMissingModuleSource": "error",
+    //"reportGeneralTypeIssues": "warning" //类型问题
+  },
+  "python.languageServer": "Pylance", // 保持 Pylance，但确保不干扰 linting
+  //"python.linting.lintOnSave": true, // 保存时运行 linting
+  //"python.linting.pylintUseMinimalCheckers": false, // 使用完整 Pylint 检查
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.autoImportCompletions": true,
+  "editor.formatOnSave": true,
+}
+
+
+{
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/build/**": true
+  },
+  "files.exclude": {
+    "**/*.pyc": true,
+    "**/__pycache__": true
+  },
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "python.analysis.extraPaths": [
+    //"/Users/bergman/.pysidenv/lib/python*/site-packages"
+  ],
+  "python.defaultInterpreterPath": "/Users/bergman/.pysidenv/bin/python",
+  "cmake.ignoreCMakeListsMissing": true,
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  //"python.analysis.reportUnusedImport": "none",
+  "python.analysis.diagnosticSeverityOverrides": {
+    //"unused-import": "none", 是废弃配置.
+    "reportUnusedImport": "none",
+    "reportShadowedImports": "error", //重复定义导入
+    //"reportMissingImports": "error", //无法解析导入语句 默认就是error
+    "reportMissingModuleSource": "error",
+    //"reportGeneralTypeIssues": "warning" //类型问题
+  },
+  "python.languageServer": "Pylance", // 保持 Pylance，但确保不干扰 linting
+  //"python.linting.lintOnSave": true, // 保存时运行 linting
+  //"python.linting.pylintUseMinimalCheckers": false, // 使用完整 Pylint 检查
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.autoImportCompletions": true,
+}

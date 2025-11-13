@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "运行QML",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "runtimeExecutable": "qml",
+            "runtimeArgs": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "运行Python文件",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "运行PySide6应用",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal", 
+            "cwd": "${workspaceFolder}",
+            //"env": {
+            //    "QT_LOGGING_RULES": "*=false"
+            //}
+        }
+    ]
+}
