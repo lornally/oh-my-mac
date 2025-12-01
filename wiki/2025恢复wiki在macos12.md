@@ -40,3 +40,6 @@ $wgDBpassword = "123.456a"; # 默认是空, 这个要改为空
 
 1. intl问题, 本来很简单, 但是, 在kimi的傻逼指挥下, 乱套了, 所以只能卸载xampp再安装. 他有uninstall文件.
 
+###### 可能得解决方案
+1. 开一个docker, 让cursor/Claude折腾, 直到能运行为止
+2. 下载老版本的xampp-vm, 
