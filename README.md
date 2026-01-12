@@ -1,5 +1,24 @@
 > 拿到一台新mac很开心, 但是干啥啥不行, 因为还需要做一系列的配置,  这里是一个新mac需要的所有内容, 项目的终极目标是类似oh-my-zsh一样, 提供一个一键搞定的方案. 目前还在努力....
 
+###### git设置
+
+为了clone本项目, 你至少要在自己的git账号中有ssh密钥
+
+```sh
+# 先执行任意git命令, 唤起macos的git工具安装
+git clone git@github.com:lornally/oh-my-mac.git
+ 
+# 生成一个ssh密钥
+ssh-keygen -t ed25519 -C "2026.1@macstudio1Tmmm" 
+# copy这个密钥 
+pbcopy < ~/.ssh/id_ed25519.pub
+# 此时你需要在github设置这个密钥. 一般位置
+账号-》setting-〉ssh key
+
+# 然后就可以clone本项目了
+git clone git@github.com:lornally/oh-my-mac.git
+```
+
 ###### 安装
 
 - 参考: 安装列表
