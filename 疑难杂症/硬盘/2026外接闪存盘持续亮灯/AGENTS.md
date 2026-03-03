@@ -8,18 +8,17 @@
 
 ## 我的错误总结
 
-### 2. 硬件类型瞎猜（致命错误）
+### 1. 硬件类型瞎猜（致命错误）
 - **错误**：默认假设为机械硬盘，**没有通过命令验证**
 - **应该做的**：
   ```bash
   # 通过系统命令确认硬件类型
   diskutil info /dev/diskX | grep "Solid State"
-  system_profiler SPStorageDataType | grep -A 5 "海康"
-  ioreg -l | grep -i "ssd\|solid"
+  system_profiler SPStorageDataType
   ```
 - **结论**：不知道就问，或者用命令查，不要猜
 
-### 3. 技术知识瞎猜（致命错误）
+### 2. 技术知识瞎猜（致命错误）
 - **错误**：说"转化 APFS = 抹盘"，**没有先搜索验证**
 - **应该做的**：
   ```
@@ -33,14 +32,9 @@
 
 ### 硬件信息验证
 ```bash
-# 1. 确认设备类型
+# 确认设备类型
 system_profiler SPStorageDataType SPUSBDataType SPNVMeDataType
-
-# 2. 确认磁盘格式
-diskutil info /dev/diskX | grep -E "File System|Device Identifier|Volume Name"
-
-# 3. 确认健康状态（SSD）
-smartctl -a /dev/diskX  # 需要安装 smartmontools
+diskutil info /dev/diskX | grep -E "Solid State|Device Location"
 ```
 
 ### 技术知识验证（不确定时立即搜索）
@@ -67,7 +61,6 @@ smartctl -a /dev/diskX  # 需要安装 smartmontools
 ```bash
 # 验证谁在占用
 sudo lsof +D /Volumes/卷名
-sudo fs_usage | grep -i "卷名" | head -20
 
 # 关闭 Spotlight（如果是索引问题）
 sudo mdutil -i off /Volumes/卷名
@@ -81,9 +74,6 @@ diskutil unmountDisk force /dev/diskX
 ```bash
 # 验证文件系统
 diskutil verifyDisk /dev/diskX
-
-# SSD 额外检查
-diskutil info /dev/diskX | grep -i trim
 ```
 
 ### Step 3: 修复决策
@@ -100,15 +90,11 @@ verifyDisk 结果？
 
 ---
 
-
----
-
 ## 禁止行为
 
 1. ❌ **猜测硬件类型** → 必须用命令验证
 2. ❌ **猜测技术细节** → 必须搜索验证
-
-4. ❌ **凭记忆说"肯定"** → 不确定就说"我需要验证一下"
+3. ❌ **凭记忆说"肯定"** → 不确定就说"我需要验证一下"
 
 ---
 
@@ -122,7 +108,6 @@ system_profiler SPStorageDataType
 
 # 谁在占用磁盘
 sudo lsof +D /Volumes/卷名
-sudo fuser -c /Volumes/卷名
 
 # SSD 健康
 smartctl -a /dev/diskX  # 需安装 smartmontools
