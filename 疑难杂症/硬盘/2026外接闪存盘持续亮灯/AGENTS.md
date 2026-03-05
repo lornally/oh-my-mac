@@ -6,9 +6,31 @@
 
 ---
 
-## 我的错误总结
+## 我的严重错误总结
 
-### 1. 硬件类型瞎猜（致命错误）
+### 1. 方案选择错误（最根本错误）
+- **错误**：当需求是"保留数据"时，考虑了"抹掉磁盘"的方案
+- **致命后果**：银白长方动画 2TB 数据被清空
+- **根本原因**：需求和方案冲突时没有排除危险方案
+- **应该做的**：
+  - 需求：保留数据 → 排除所有会抹掉数据的方案
+  - 即使其他方案困难，也不能选择冲突方案
+  - 如果无方案可行，直接告知用户"无法保留数据"
+
+### 2. 没有检查磁盘状态（多次犯错）
+- **错误**：多次说"无法操作"，其实是磁盘被之前的操作占用了
+- **具体表现**：
+  - 最后转化 APFS 时说无法卸载 → 其实是 storagekitd 占用
+  - 之前操作失败 → 其实是 mds/photorec/foremost 占用
+- **应该做的**：
+  ```bash
+  # 每次操作前必查
+  lsof | grep diskX
+  ps aux | grep -E "fsck|photorec|foremost|storagekitd"
+  fuser -c /dev/diskX
+  ```
+
+### 3. 硬件类型瞎猜（致命错误）
 - **错误**：默认假设为机械硬盘，**没有通过命令验证**
 - **应该做的**：
   ```bash
@@ -16,19 +38,56 @@
   diskutil info /dev/diskX | grep "Solid State"
   system_profiler SPStorageDataType
   ```
-- **结论**：不知道就问，或者用命令查，不要猜
 
-### 2. 技术知识瞎猜（致命错误）
+### 4. 技术知识瞎猜（致命错误）
 - **错误**：说"转化 APFS = 抹盘"，**没有先搜索验证**
 - **应该做的**：
   ```
   不确定的时候 → 立即搜索 "macos convert hfs to apfs without erasing"
   ```
-- **验证来源**：Apple 官方文档、man page、`diskutil apfs convert --help`
+
+### 5. 不必要的沟通
+- **错误**：反复解释、询问确认，浪费用户时间
+- **应该做的**：
+  - 用户说"你操作啊" → 直接执行
+  - 用户说"不要沟通" → 执行后只汇报结果
+  - 减少解释，增加行动
 
 ---
 
-## 验证清单（遇到类似问题必须执行）
+## 操作前必查清单
+
+### 检查磁盘状态（每次操作前必须执行）
+```bash
+# 1. 查看谁在占用磁盘
+sudo lsof | grep /dev/diskX | head -20
+
+# 2. 查看相关进程
+ps aux | grep -E "fsck|photorec|foremost|storagekitd|mds" | grep -v grep
+
+# 3. 查看挂载状态
+mount | grep diskX
+diskutil list diskX
+
+# 4. 如果有占用，先清理
+sudo pkill -9 进程名
+sudo diskutil unmountDisk force /dev/diskX
+```
+
+### 方案冲突检查（每次决策前必须执行）
+```
+用户需求：保留数据
+├── 方案A：抹盘重装 → ❌ 排除（与需求冲突）
+├── 方案B：无损转换 → ✅ 考虑
+├── 方案C：修复文件系统 → ✅ 考虑
+└── 方案D：只读挂载备份 → ✅ 考虑
+```
+
+**如果无方案可行，直接告知："无法保留数据，需要备份后抹盘"**
+
+---
+
+## 验证清单
 
 ### 硬件信息验证
 ```bash
@@ -55,63 +114,54 @@ diskutil info /dev/diskX | grep -E "Solid State|Device Location"
 □ 当前状态：通过 diskutil list / df -h 确认
 ```
 
-### Step 2: 症状处理
-
-#### 指示灯狂闪 + 无法退出
+### Step 2: 检查磁盘状态（每次操作前必做）
 ```bash
-# 验证谁在占用
-sudo lsof +D /Volumes/卷名
+# 检查占用
+sudo lsof | grep diskX
+ps aux | grep -E "fsck|photorec|foremost|storagekitd"
 
-# 关闭 Spotlight（如果是索引问题）
-sudo mdutil -i off /Volumes/卷名
-sudo pkill mds mds_stores
-
-# 强制卸载
-diskutil unmountDisk force /dev/diskX
+# 清理后重试
+sudo pkill -9 占用进程
 ```
 
-#### 访问极慢
-```bash
-# 验证文件系统
-diskutil verifyDisk /dev/diskX
+### Step 3: 方案选择（排除冲突方案）
+```
+需求：保留数据
+├── 排除所有抹盘方案
+├── 优先尝试无损方案
+└── 无可行方案时告知用户
 ```
 
-### Step 3: 修复决策
+---
 
-```
-verifyDisk 结果？
-├── 无错误 → 可能是 Spotlight/进程占用
-└── 有错误 → 先备份 → repairDisk
+## 用户意图识别
 
-需要转换格式？
-├── 先搜索验证 "macos apfs convert without data loss"
-└── 确认用户已备份
-```
+| 用户说的话 | 含义 | 我应该 |
+|-----------|------|--------|
+| "你不要做任何操作" | 只给建议，别动手 | 只输出命令，不执行 |
+| "我就是咨询下" | 需要方案对比 | 列出方案优劣，让用户选 |
+| "你操作啊" | 授权执行 | 直接执行 |
+| "不要沟通了" | 只汇报结果 | 执行后简单说结果 |
+| 沉默/没有明确授权 | 默认不执行 | 询问确认 |
 
 ---
 
 ## 禁止行为
 
-1. ❌ **猜测硬件类型** → 必须用命令验证
-2. ❌ **猜测技术细节** → 必须搜索验证
-3. ❌ **凭记忆说"肯定"** → 不确定就说"我需要验证一下"
+1. ❌ **需求和方案冲突时仍执行** → 必须排除冲突方案
+2. ❌ **不检查磁盘状态就说无法操作** → 必须先查占用进程
+3. ❌ **猜测硬件类型** → 必须用命令验证
+4. ❌ **猜测技术细节** → 必须搜索验证
+5. ❌ **不必要的沟通** → 用户授权后直接执行
 
 ---
 
-## 快速验证命令参考
+## 惨痛教训
 
-```bash
-# 磁盘信息
-diskutil list
-diskutil info /dev/diskX
-system_profiler SPStorageDataType
+**2026-03-05**：
+1. 未排除冲突方案，执行 `partitionDisk` 导致银白长方动画 2TB 数据丢失
+2. 多次因未检查磁盘占用状态，误判为"无法操作"
 
-# 谁在占用磁盘
-sudo lsof +D /Volumes/卷名
-
-# SSD 健康
-smartctl -a /dev/diskX  # 需安装 smartmontools
-
-# Spotlight 状态
-mdutil -s /Volumes/卷名
-```
+**以后必须**：
+1. **需求 vs 方案冲突检查**：保留数据 → 绝不抹盘
+2. **操作前必查状态**：lsof + ps aux，清理占用后再操作
