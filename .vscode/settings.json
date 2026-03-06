@@ -1,0 +1,49 @@
+{
+  // ========================================
+  // 性能优化：排除大文件夹
+  // ========================================
+  
+  // 1. 文件浏览器中隐藏的文件
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/*.pyc": true,
+    "**/.venv": true,
+    "**/.venv_tools": true,
+    "**/venv": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.DS_Store": true,
+    "**/.git": true
+  },
+  
+  // 2. 不监视变化的文件（减少 CPU 占用）
+  "files.watcherExclude": {
+    "**/__pycache__/**": true,
+    "**/.mypy_cache/**": true,
+    "**/.pytest_cache/**": true,
+    "**/.ruff_cache/**": true,
+    "**/.venv/**": true,
+    "**/.venv_tools/**": true,
+    "**/venv/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/log/**": true,
+    "**/参考/**/build/**": true
+  },
+  
+  // 3. 搜索时排除的文件
+  "search.exclude": {
+    "**/.venv": true,
+    "**/.venv_tools": true,
+    "**/node_modules": true,
+    "**/dist": true
+  },
+  
+  // 4. 其他性能优化
+  "files.maxMemoryForLargeFilesMB": 4096,
+  "editor.largeFileOptimizations": true
+}
