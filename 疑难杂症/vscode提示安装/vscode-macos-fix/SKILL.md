@@ -35,19 +35,20 @@ ps aux | grep "Code Helper" | wc -l
 
 ### Issue 1: VS Code Keeps Asking to Install Code Helper
 
-**Symptom:** Dialog appears saying "An update is ready to install. 'Code' is trying to add new helper tools."
+**Symptom:** Dialog appears saying "An update is ready to install. 'Code' is trying to add new helper tools." This happens every time VS Code starts, even after entering password.
 
-**Root Cause:** `/usr/local/bin/code` is owned by `root` instead of the current user.
+**Root Cause:** The entire `/Applications/Visual Studio Code.app` bundle is owned by `root` instead of the current user. VS Code detects this and tries to "fix" it by reinstalling, but the permission issue persists.
 
-**Fix:**
+**Real Fix (NOT just the symlink):**
 ```bash
-# Remove old link
-sudo rm /usr/local/bin/code
+# The ACTUAL fix - change ownership of the entire VS Code app
+sudo chown -R $(whoami):admin "/Applications/Visual Studio Code.app"
 
-# Recreate with correct ownership
-sudo ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin/code
+# Also fix the command line symlink
 sudo chown $(whoami):admin /usr/local/bin/code
 ```
+
+**Common Mistake:** Only fixing `/usr/local/bin/code` symlink is NOT enough. The app bundle itself must be owned by the user.
 
 ### Issue 2: Command Not Found (kimi, claude, etc.)
 
