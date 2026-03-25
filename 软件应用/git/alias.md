@@ -18,5 +18,9 @@ alias | grep git
 code ~/.zshrc
 alias grh1='git reset HEAD~1'
 alias grh2='git reset HEAD~2'
+
+# 回退之后, 新建分支
+git checkout -b feature/new-design
+gcb claud5
 ```
 
