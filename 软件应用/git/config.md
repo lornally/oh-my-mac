@@ -28,7 +28,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-
+[push]
+  default = simple
+  autoSetupRemote = true
 
 [lfs]
 	repositoryformatversion = 0
