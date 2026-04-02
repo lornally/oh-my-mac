@@ -1,5 +1,5 @@
 mihomo（Clash 的继任者）
-
+https://github.com/MetaCubeX/ClashX.Meta
 
 当初 Clash 确实凭借规则分流这一杀手锏，在体验和功能上碾压了传统 SS/SSR 的「全局代理」模式，成为代理客户端的事实标准。
 
